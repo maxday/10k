@@ -7,3 +7,5 @@
 - an url shorterner
 - some sort of game interactive (to win peole choice award)
  
+# Exmple of entries:
+- https://css-colour-quiz.azurewebsites.net/ 
