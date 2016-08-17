@@ -2,6 +2,9 @@
 Inspiring the Web with Just 10k.
 [a-k-apart.com](https://a-k-apart.com/)
 
+## Nice articles to read
+http://tobyho.com/2010/03/11/how-much-of-the-web-actually/ (quite old but really interesting)
+
 ## Deadline
 September 30th 2016
 
