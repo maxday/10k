@@ -16,3 +16,7 @@
 - http://fury.com/war/
 
 last 10k edition winners: http://www.creativebloq.com/netmag/10k-apart-winners-talk-responsive-apps-10116710
+
+
+## color to use
+let's use the best marketing colors (red,green...) http://www.business2community.com/marketing/10-colors-that-increase-sales-and-why-0366997#oKj5G77h3Qp54Jzd.97
