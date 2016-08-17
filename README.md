@@ -6,18 +6,15 @@ Inspiring the Web with Just 10k.
 September 30th 2016
 
 ## Projects
-We could create 3 projects and submit them all
+We could create 3 projects and submit them all to have more chance.
 
 # How to develop
-
-without javascript.
-
-if we use iamges better svg.
-
-heavy use of css all minifed with shortest selector names.
+- without javascript.
+- if we use iamges better svg.
+- heavy use of css all minifed with shortest selector names.
 
 ## Questions:
-1. can we use canvas with JS 8 i() guess no)
+1. can we use canvas with JS?  (I guess no)
 2. js it is counted in the 10k if loaded from external?
 3. external font like gogle fond loaded via cdn count in the 10k?
 4. favicon count in the 10k?

@@ -1,5 +1,5 @@
 
 # Ideas of what to develop
-- a desktop repliated in css html
-- a mobile recreated in pure css
+- a desktop replicated in css html
+- a mobile phone recreated in pure css
 - 
