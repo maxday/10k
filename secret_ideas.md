@@ -8,7 +8,10 @@
 - some sort of game interactive (to win peole choice award)
  
 # Exmple of entries:
-twiter search of entries: https://twitter.com/search?q=10k%20apart%20entry&src=typd
+- blackJack:  https://web.archive.org/web/20150323061600/http://10k.aneventapart.com/2/Uploads/621/
+- https://web.archive.org/web/20150331172347/http://10k.aneventapart.com/2/Uploads/660/
+- https://web.archive.org/web/20121025154900/http://10k.aneventapart.com/2/Uploads/506/#hello%20how%20are%20you%3F
+- https://web.archive.org/web/20111126105424/http://10k.aneventapart.com/2/Uploads/541/
 - https://css-colour-quiz.azurewebsites.net/ 
 - http://fury.com/war/
 - 
