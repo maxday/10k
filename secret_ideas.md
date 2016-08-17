@@ -19,6 +19,7 @@ last 10k edition winners: http://www.creativebloq.com/netmag/10k-apart-winners-t
 
 
 ## color to use
-let's use the best marketing colors (red,green...) http://www.business2community.com/marketing/10-colors-that-increase-sales-and-why-0366997#oKj5G77h3Qp54Jzd.97
-http://designmodo.github.io/Flat-UI/
-http://timtrott.co.uk/web-20-color-palette/
+let's use the best marketing colors (red,green...) 
+- http://www.business2community.com/marketing/10-colors-that-increase-sales-and-why-0366997#oKj5G77h3Qp54Jzd.97
+- http://designmodo.github.io/Flat-UI/
+- http://timtrott.co.uk/web-20-color-palette/
