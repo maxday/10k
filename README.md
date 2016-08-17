@@ -19,5 +19,6 @@ We could create 3 projects and submit them all to have more chance.
 3. external font like google fond loaded via cdn count in the 10k?
 4. favicon count in the 10k?
 5. images loaded from external website count in the 10k if not embeded?
+
 -> a lot of answers here : https://a-k-apart.com/faq favicon does not count, neither images if loaded async
 
