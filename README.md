@@ -22,14 +22,11 @@ We could create 3 projects and submit them all to have more chance.
 3. external font like google fond loaded via cdn count in the 10k?
 4. favicon count in the 10k?
 5. images loaded from external website count in the 10k if not embeded?
-<<<<<<< HEAD
+
 ### i read online: 
 [http://aneventapart.com/news/post/the-10k-apart-challenge](http://aneventapart.com/news/post/the-10k-apart-challenge)
 - allows external JavaScript libraries to skip the limit
 - Contestants can use jQuery, Prototype or Typekit libraries without it counting to their overall file size. 
 - You can similarly use TypeKit to make your fonts extra-sweet
-=======
 
 -> a lot of answers here : https://a-k-apart.com/faq favicon does not count, neither images if loaded async
-
->>>>>>> 09e180f9da805555f876ff852e2b431416fc6bf1
