@@ -12,6 +12,7 @@ We could create 3 projects and submit them all to have more chance.
 - without javascript.
 - if we use images better use svg.
 - heavy use of css all minifed with shortest selector names.
+- i read online: allows external JavaScript libraries to skip the limit
 
 ## Questions:
 1. can we use canvas with JS?  (I guess no)
