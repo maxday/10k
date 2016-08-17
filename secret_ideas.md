@@ -14,4 +14,5 @@
 - https://web.archive.org/web/20111126105424/http://10k.aneventapart.com/2/Uploads/541/
 - https://css-colour-quiz.azurewebsites.net/ 
 - http://fury.com/war/
-- 
+
+last 10k edition winners: http://www.creativebloq.com/netmag/10k-apart-winners-talk-responsive-apps-10116710
