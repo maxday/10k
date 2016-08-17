@@ -8,4 +8,7 @@
 - some sort of game interactive (to win peole choice award)
  
 # Exmple of entries:
+twiter search of entries: https://twitter.com/search?q=10k%20apart%20entry&src=typd
 - https://css-colour-quiz.azurewebsites.net/ 
+- http://fury.com/war/
+- 
