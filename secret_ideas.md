@@ -6,6 +6,7 @@
 - some sort of game...no ideas what and how without js
 - an url shorterner
 - some sort of game interactive (to win peole choice award)
+- inception : a tools to check if a website loads more than 10k !!!!
  
 # Exmple of entries:
 - blackJack:  https://web.archive.org/web/20150323061600/http://10k.aneventapart.com/2/Uploads/621/
