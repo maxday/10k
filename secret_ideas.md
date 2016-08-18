@@ -7,6 +7,7 @@
 - an url shorterner
 - some sort of game interactive (to win peole choice award)
 - inception : a tools to check if a website loads more than 10k !!!!
+- 2048 game https://gabrielecirulli.github.io/2048/
  
 # Exmple of entries:
 - blackJack:  https://web.archive.org/web/20150323061600/http://10k.aneventapart.com/2/Uploads/621/
@@ -20,7 +21,7 @@ last 10k edition winners: http://www.creativebloq.com/netmag/10k-apart-winners-t
 
 
 ## color to use
-let's use the best marketing colors (red,green...) 
+let's use the best marketing colors (red,green...) I means color who psychologically attract "points"
 - http://www.business2community.com/marketing/10-colors-that-increase-sales-and-why-0366997#oKj5G77h3Qp54Jzd.97
 - http://designmodo.github.io/Flat-UI/
 - http://timtrott.co.uk/web-20-color-palette/
