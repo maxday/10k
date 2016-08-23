@@ -31,3 +31,13 @@ let's use the best marketing colors (red,green...) I means color who psychologic
 
 ## How to optimise your Markup
 - http://openmymind.net/Minimalist-Markup/
+
+# visual ideas for color palette applciation
+- http://stylifyme.com/
+- https://coolors.co/
+- https://www.materialpalette.com/cyan/pink
+- http://materialcolors.com/
+- http://uigradients.com/#
+- http://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html
+- https://color.adobe.com/fr/create/color-wheel/
+- http://blog.hubspot.com/marketing/color-palette-famous-websites#sm.00000dj4kougsvfqrtcmzoxp25wuq
