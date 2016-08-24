@@ -5,7 +5,7 @@ Inspiring the Web with Just 10k.
 # To setup the server :
 - make sure you have nodejs installed
 - go to the /js folder
-- run npm install
+- npm install
 
 # To run the server :
 - go to the /js folder
