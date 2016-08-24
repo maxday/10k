@@ -10,6 +10,8 @@ Inspiring the Web with Just 10k.
 # To run the server :
 - go to the /js folder
 - npm start
+- go to :   http://localhost:8080/load/ffcc44,0167fb,01ff45
+
 
 ## Nice articles / resource / inspirations
 - http://tobyho.com/2010/03/11/how-much-of-the-web-actually/ (quite old but really interesting)
