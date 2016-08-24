@@ -1,0 +1,28 @@
+- aldo :
+  - 2 ou 3 pages interfaces (homepage (upload), visualiation, pie chart?)
+  - responsive mobile
+  - sass
+  - sort by frequency, sort by color
+  - choose le nom du projet
+  - made with love, link github
+  - at the end, produce a simple gif
+
+- max :
+  - algo sur node (si pas de js)
+  - integrer dans projet (+ readme)
+  - upload image JS/http
+  - readme
+  - image en ligne
+  - print screen server side
+
+- idees :
+  - couleur primaire
+  - trier selon distance couleur
+  - ajuster la largeur selon pourcetage couleur
+  - color picker
+  - export LESS, CSS, SASS, photoshop
+  - lien full http pour partager (personal url)
+  - fine tuning du export, minification etc
+  - disclaimer, nothing is saved
+  - pointor on picture with color (mouse over sur les stripes, move le pointor)
+  - tester back button (no retry)
