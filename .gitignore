@@ -5,3 +5,4 @@ dist
 .tmp
 bower_components
 test/bower_components
+js/node_modules
