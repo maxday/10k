@@ -818,7 +818,14 @@ button:hover {
 .h-card a {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
-    flex-grow: 1
+    flex-grow: 1;
+    transition: background 1.0s ease;
+    /*
+    -webkit-transition: background-color 500ms ease-out 1s;
+    -moz-transition: background-color 500ms ease-out 1s;
+    -o-transition: background-color 500ms ease-out 1s;
+    transition:
+    */
 }
 .h-card a:link,
 .h-card a:visited {
@@ -829,6 +836,7 @@ button:hover {
 .h-card a:focus,
 .h-card a:hover,
 .h-card.clickable:hover a {
+     
     background: #e40;
     color: #fff
 }
@@ -882,6 +890,7 @@ button:hover {
         border-color: transparent
     }
 }
+/*
 .pagination {
     margin: 2.75rem auto 0;
     text-align: center
@@ -921,6 +930,8 @@ button:hover {
         order: 3
     }
 }
+*/
+/*
 @-webkit-keyframes count-issue {
     0% {
         background-color: #f5baba
@@ -953,6 +964,8 @@ button:hover {
         background-color: #fff
     }
 }
+*/
+/*
 .count {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
@@ -973,4 +986,4 @@ button:hover {
 .count--over+strong,
 .count--under+strong {
     color: #d22
-}
+}*/
