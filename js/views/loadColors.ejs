@@ -27,15 +27,33 @@
         <li><a href="/export/less/<%= colors %>" id="exportLess">Less</a></li>
       </ul>
       <div id="exportResult">
-         <% for(var i = 0 ; i < exportColor.length ; i++) { %>
-           <%= exportColor[i]; %>
-           <br />
+
+         <% if(typeof exportColor != 'undefined') { %>
+           <% for(var i = 0 ; i < exportColor.length ; i++) { %>
+             <%= exportColor[i]; %>
+             <br />
+           <% } %>
          <% } %>
       </div>
+    </div>
+
+    <hr />
+    <div class="screenshot">
+      <form action="/screenshot" method="GET">
+        <input type="text" name="takeScreenshotURL" id="takeScreenshotURL" value="http://stackoverflow.com" />
+        <input type="submit" value="Get color from website" id="takeScreenshot" />
+      </form>
+    </div>
+    <div id="screenshotResult">
+      <% if(typeof screenshotImg != 'undefined') { %>
+        <img src = "/static/screenshots/<%= screenshotImg %>" width=800 />
+        aaa
+      <% } %>
     </div>
 
   </main>
   <% include partials/footer %>
   <script src="/static/exportAction.js"></script>
+  <script src="/static/takeScreenshot.js"></script>
 </body>
 </html>

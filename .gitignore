@@ -6,4 +6,5 @@ dist
 bower_components
 test/bower_components
 js/node_modules
+js/public/screenshots
 npm-debug.log
