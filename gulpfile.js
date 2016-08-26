@@ -44,8 +44,8 @@ gulp.task('html', ['styles'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe($.if('*.css', $.cssnano({safe: false, colormin:true,convertValues:true,autoprefixer: false,discardComments:true,discardDuplicates:true,discardOverridden:true,filterOptimiser:true,functionOptimiser:true,mergeIdents:true,mergeLonghand:true,mergeRules:true})))
+    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true,html5:true,quoteCharacter: "'",removeAttributeQuotes:true,removeRedundantAttributes:true })))
     .pipe(gulp.dest('dist'));
 });
 
@@ -77,7 +77,7 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['dist']));
 
 gulp.task('serve', ['styles', 'fonts'], () => {
   browserSync({
@@ -130,7 +130,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['clean','lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

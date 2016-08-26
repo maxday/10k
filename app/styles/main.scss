@@ -130,14 +130,30 @@ footer {
 
 
 /* from akapart */
+a:link,
+a:visited,
+button {
+    transition: all .25s ease
+}
+body,
+ol,
+ul {
+    line-height: 1.4
+}
+
+* {
+    margin-top: 0;
+    margin-bottom: 0;
+    box-sizing: border-box
+}
+ 
 body {
     font-size: 1.0rem;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    
+    font-smoothing: antialiased; 
     color: #232323;
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
@@ -174,6 +190,7 @@ body{
           #f22 100%
       );
 }
+/*
 body{   -webkit-filter: blur(2px);
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
@@ -189,9 +206,15 @@ body:hover{
     filter: none;
 
 }
-
-//    transition: background-image 2.5s ease;
-
+*/
+h1,
+h2,
+h3 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: 500;
+    line-height: 1.1;
+    clear: both
+} 
 main {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
