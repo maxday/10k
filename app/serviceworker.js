@@ -11,7 +11,7 @@ addEventListener('activate', event => {
 				return Promise.all(deletions);
 			})
 			.catch(err => {
-				warn(`activate: ${err}`);
+				warn('activate: ${err}');
 			})
 			.then( clients.claim() )
 	);
@@ -19,7 +19,7 @@ addEventListener('activate', event => {
 
 /*!
  * This is the fetch handler. It runs upon every request, but it only acts upon
- * requests that return true when passed to `isCacheableRequest`. It both serves
+ * requests that return true when passed to 'isCacheableRequest'. It both serves
  * requests from the cache and adds requests to the cache.
  */
 addEventListener('fetch', event => {
@@ -33,7 +33,7 @@ addEventListener('fetch', event => {
 		event.respondWith(
 			procedure(request, cacheType)
 				.catch(err => {
-					warn( `fetch: ${err}` );
+					warn('fetch: ${err}');
 					return matchFallback(request);
 				 })
 		);
@@ -42,7 +42,7 @@ addEventListener('fetch', event => {
 
 /*!
  * This is the installation handler. It runs when the worker is first installed.
- * It precaches the asset paths defined by the `REQUIRED_DEPENDENCIES`.
+ * It precaches the asset paths defined by the 'REQUIRED_DEPENDENCIES'.
  */
 addEventListener( 'install', event => {
 	const requests = REQUIRED_DEPENDENCIES.map(url => {
@@ -55,7 +55,7 @@ addEventListener( 'install', event => {
 				return cache.addAll(requests);
 			 })
 			.catch(err => {
-				warn(`install: ${err}`);
+				warn('install: ${err}');
 			 })
 			.then( skipWaiting() )
 	);
@@ -66,7 +66,7 @@ addEventListener( 'install', event => {
  * example, to clean up cache sizes).
  */
 addEventListener('message', event => {
-	// Trim caches if the `trimCaches` command is sent
+	// Trim caches if the 'trimCaches' command is sent
 	if (event.data.command == 'trimCaches') {
 		// Trim caches
 		for ( let cache in CACHE_TYPES )
@@ -117,7 +117,7 @@ catch( err )
 // Cache Key
 const VERSION = '1471977617589';
 
-// Enable `console` debugging messages
+// Enable 'console' debugging messages
 const SW_DEBUG = false;
 
 // This is shortcut reference to the registration scope
@@ -131,12 +131,10 @@ const CACHE_TYPES = {
 	static: 'static'
 };
 
-// This is the URL `hostname` whitelist for incoming `fetch` event requests.
+// This is the URL 'hostname' whitelist for incoming 'fetch' event requests.
 const hostsAllowed = new Set([
 	'localhost',
-	'10kapart.blob.core.windows.net',
-	'a-k-apart.com',
-	'cdnjs.cloudflare.com'
+	'localhost:9000' 
 ]);
 
 // This is the maximum number of entries that certain caches are allowed to contain.
@@ -146,14 +144,14 @@ const cacheSizeLimits = new Map([
 	[CACHE_TYPES.other, 20]
 ]);
 
-// These are the options supplied to instances of `caches.match()` for each corresponding cache bucket.
+// These are the options supplied to instances of 'caches.match()' for each corresponding cache bucket.
 const matchOptions = new Map([
   [CACHE_TYPES.static, {
     ignoreSearch: true
   }]
 ]);
 
-// These are the options supplied to instances of `fetch()` for each bucket.
+// These are the options supplied to instances of 'fetch()' for each bucket.
 const fetchOptions = new Map([
 	[CACHE_TYPES.static, {
 		credentials: 'same-origin',
@@ -215,7 +213,7 @@ const cacheCriteria = new Map([
 	]]
 ]);
 
-// These are `fetch` event proceedures to follow for each content/cache type.
+// These are 'fetch' event proceedures to follow for each content/cache type.
 const procedures = new Map([
 	[CACHE_TYPES.content, retrievePage],
 	[CACHE_TYPES.static, retrieveAsset],
@@ -274,13 +272,13 @@ function toCacheName( str )
 	return [VERSION, str].join(delim);
 }
 
-// Check if a value is equal to `null` or `undefined`.
+// Check if a value is equal to 'null' or 'undefined'.
 function isNil( val )
 {
 	return val === null || val === undefined;
 }
 
-// Check if a value is equal to `true`.
+// Check if a value is equal to 'true'.
 function isTrue( val )
 {
 	return val === true;
@@ -336,7 +334,7 @@ function isPrecacheRequest( req )
 	return ! isNil( match );
 }
 
-// Infer the content type of a request based on its `headers`.
+// Infer the content type of a request based on its 'headers'.
 function getContentType( req )
 {
 	const header = req.headers.get('Accept');
@@ -407,7 +405,7 @@ function matchRequest( req, options )
 {
 	return caches.match(req, options).then(res => {
 		return res || Promise.reject(
-			`matchRequest: could not match ${req.url}`
+			'matchRequest: could not match ${req.url}'
 		);
 	});
 }
@@ -457,7 +455,7 @@ function limitCacheSize( cacheName, maxItems )
 			return deleted.filter( isTrue ).length;
 		})
 		.catch(err => {
-			warn( `limitCacheSize: ${err}` );
+			warn( 'limitCacheSize: ${err}' );
 		});
 }
 
@@ -470,7 +468,7 @@ function retrieveAsset( req, type )
 	}
 	return matchRequest(req, matchOptions.get(type))
 			.catch(err => {
-				warn(`retrieveAsset: ${err}`);
+				warn('retrieveAsset: ${err}');
 				return fetchRequest(req);
 			 });
 }
@@ -480,7 +478,7 @@ function retrievePage( req, type )
 {
 	return fetchRequest(req)
 			.catch(err => {
-				warn( `retrievePage: ${err}` );
+				warn( 'retrievePage: ${err}' );
 				return matchRequest( req, matchOptions.get(type) );
 			 });
 }
