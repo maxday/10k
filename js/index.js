@@ -12,15 +12,31 @@ app.get('/', function (request, response) {
 });
 
 app.get('/load/:colors', function (request, response) {
-  response.render('loadColors.ejs', { colors : request.params.colors } );
+  response.render('loadColors.ejs', { colors : request.params.colors, exportColor : [] } );
+});
+
+app.get('/export/:colors', function (request, response) {
+
+  var colors = {
+    sass : sass(request.params.colors),
+    less : less(request.params.colors)
+  }
+
+  response.status(200).send(colors);
 });
 
 app.get('/export/:kind/:colors', function (request, response) {
   if(request.params.kind === "less") {
-    response.render('exportColors.ejs', { exportArray : less(request.params.colors) } );
+    response.render('loadColors.ejs', {
+      colors : request.params.colors,
+      exportColor : less(request.params.colors)
+    });
   }
   else if(request.params.kind === "sass") {
-    response.render('exportColors.ejs', { exportArray : sass(request.params.colors) } );
+    response.render('loadColors.ejs', {
+      colors : request.params.colors,
+      exportColor : sass(request.params.colors)
+    });
   }
   else {
     response.status(404).send({ errorMsg: 'kind : ' + request.params.kind + ' is incorrect' });

@@ -18,7 +18,24 @@
         <% } %>
       </tbody>
     </table>
+
+    <hr />
+    <div class="export">
+      Export :
+      <ul>
+        <li><a href="/export/sass/<%= colors %>" id="exportSass">Sass</a></li>
+        <li><a href="/export/less/<%= colors %>" id="exportLess">Less</a></li>
+      </ul>
+      <div id="exportResult">
+         <% for(var i = 0 ; i < exportColor.length ; i++) { %>
+           <%= exportColor[i]; %>
+           <br />
+         <% } %>
+      </div>
+    </div>
+
   </main>
   <% include partials/footer %>
+  <script src="/static/exportAction.js"></script>
 </body>
 </html>
