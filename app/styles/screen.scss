@@ -48,25 +48,8 @@
     'to top left' 'to left top'
     'to bottom left' 'to left bottom', $value);
 }
-
-
-
-
-
-
-
  
- ::-moz-selection  {   color:green;  
- background: yellow;
-}
-::selection   {   color:green;  
- background: yellow;
-}
-
-
  header {
-    
-  
     width: 100%;
     padding: 5px 0 0 0;
     overflow: hidden;
@@ -90,9 +73,6 @@ header:before {
             green 100%
       );
 }
-.browserupgrade {
- 
-}
 
 .blured {
     -webkit-filter: blur(5px);
@@ -114,38 +94,17 @@ footer {
 }
 
 #result{
-  
-    ul{ 
+    ul{
         li{
           display:inline-block;
-           
             height:90px;
-            width:90px;
-            
-           
-
+            width:90px;  
         }
     }
 }
 
 
 /* from akapart */
-a:link,
-a:visited,
-button {
-    transition: all .25s ease
-}
-body,
-ol,
-ul {
-    line-height: 1.4
-}
-
-* {
-    margin-top: 0;
-    margin-bottom: 0;
-    box-sizing: border-box
-}
  
 body {
     font-size: 1.0rem;
@@ -177,7 +136,6 @@ body {
 }
 
 body{ 
-    
   @include x-multiple-colored-gradient(
           'left',
           #f22 0%,
@@ -190,23 +148,7 @@ body{
           #f22 100%
       );
 }
-/*
-body{   -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px); 
-   
-     transition: filter 0.3s linear;}
-body:hover{
-  -webkit-filter:  none;
-    -moz-filter:  none;
-    -o-filter: none;
-    -ms-filter:none;
-    filter: none;
 
-}
-*/
 h1,
 h2,
 h3 {
