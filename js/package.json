@@ -2,12 +2,13 @@
   "name": "10k",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "npm install && node index.js"
   },
   "version": "0.0.1",
   "dependencies": {
     "ejs": "2.5.1",
-    "express": "4.9.8"
+    "express": "4.9.8",
+    "node-server-screenshot":"0.0.2"
   },
   "engines": {
     "node": "6.3.0"
