@@ -1,0 +1,53 @@
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+@mixin x-multiple-colored-gradient ($args...) {
+
+	$gradient: ();
+	$pos: nth($args, 1);
+	$pos_newsyntax: ();
+
+	@if not is-valid-keyword-direction($pos) {
+		$pos: 'top';
+	}
+
+	// New Syntax
+	@if $pos == 'top' {
+		$pos_newsyntax: 'to bottom';
+	} @else if $pos == 'right' {
+		$pos_newsyntax: 'to left';
+	} @else if $pos == 'bottom' {
+		$pos_newsyntax: 'to top';
+	} @else if $pos == 'left' {
+		$pos_newsyntax: 'to right';
+	}
+
+	@each $g in $args {
+		@if not is-valid-keyword-direction($g) {
+			$gradient: append($gradient, $g, comma);
+		}
+	}
+
+	background: -webkit-linear-gradient(unquote($pos), $gradient);
+	background:         linear-gradient(unquote($pos_newsyntax), $gradient);
+}
+@function is-valid-keyword-direction($value) {
+  @return not not index(
+    'top' 'right' 'bottom' 'left'
+    'to top' 'to right' 'to bottom' 'to left'
+    'to top right' 'to right top'
+    'to bottom right' 'to right bottom'
+    'to top left' 'to left top'
+    'to bottom left' 'to left bottom', $value);
+}
+  
+ 
+ 
+   
