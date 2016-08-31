@@ -4,22 +4,30 @@
 /*----------------------------------*/
 
 /* more or less TABLET */
-/*    Varaibles & Mixins   */
-
+/*    Varaibles & Mixins   */ 
 @import 'variables';
 @import 'mixins';
 /*----------*/
 @media (min-width: 30em) { 
   header,footer{ 
   flex-flow: row wrap;   
-   align-items:center; 
 }
+header nav  {      
+     flex-flow: row nowrap;   
+    }
+    header nav  ul li    {
+      display:flex;
+           align-items:center;
+    }  
   nav ul{
      flex-flow: row  nowrap;   
   }
 }
 /* more or less DESKTOP */
-@media (min-width: 60em) {   
+@media (min-width: 60em) {    
+  header {  
+   align-items: stretch;    
+  } 
    main{
    @include x-multiple-colored-gradient(
           'left',
@@ -32,11 +40,12 @@
           #ff2 90%,
           #f22 100%
       );
-  }
-  
+  } 
     main ul {  
    flex-flow: row;
       align-items: flex-end;   
-  }  
-
+  }   
 }
+/*----------------------------------*/
+/*  LEGGERO      LIGHT       LEGER  */
+/*----------------------------------*/

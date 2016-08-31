@@ -27,7 +27,7 @@ ul {
     line-height: 1.4;
     list-style:none;
     padding:0; 
-
+li a{ text-decoration: none;}
 } 
  
 * {
@@ -64,22 +64,22 @@ main{
       ); 
    display: flex;  
         flex-flow: column ;   
-   flex:1; 
-    
-//  
- // align-content: space-around;  
+   flex:1;  
 } 
   main  ul  {     
  display: flex;
  flex-flow: column;
     flex:1; 
     align-items: flex-start;  
- justify-content: space-around;
+ justify-content: space-between;
  li{   background: darkred; margin:3px; color:white; }
   } 
  
  
-
+header nav  {      
+   display: flex; 
+     flex-flow: column  nowrap;   
+    }
  
 nav ul {
  /*  
@@ -98,6 +98,7 @@ footer{
   font-size: 0.8em;  
  ul li{ margin: 0;}
 }
+nav  ul li{ margin: 0;}
 /* hide show image details 
  .dt,
 .show,
@@ -109,3 +110,4 @@ footer{
   display: block;
 }
 */
+ 
