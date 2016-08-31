@@ -4,8 +4,32 @@
 /*    Varaibles & Mixins   */
 
 @import 'variables';
-@import 'mixins';
- //@import 'logo';
+@import 'mixins'; 
+@import 'logo';
+
+ .logo {  
+    
+  border: 20px solid #1abc9c;
+  border-right-color: rgba(255,255,255,0); 
+  border-radius: 100%; 
+ 
+} 
+ .logo:before { 
+  content:''; 
+  position: absolute;
+  width: 5px;
+    height: 20px;
+    display:block;
+   background: red;
+   border:none;
+     border-radius: 0 5px 0 0; 
+} 
+ .logo:after { 
+ 
+
+ 
+} 
+
 /* -----------------------*/
 ::-moz-selection  {   
 color:green;
@@ -95,7 +119,7 @@ footer{
 nav  ul li{ margin: 0;} 
  
  
-main div{// the homepage content area
+main div{
    background: red;
    position:absolute;
   

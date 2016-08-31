@@ -3,7 +3,7 @@
       function resize() {
  
   var
-  w = c.width = window.innerWidth ,
+  w = c.width = window.innerWidth,
      h = c.height = window.innerHeight -83,
     ctx = c.getContext('2d'), 
     
@@ -16,7 +16,7 @@
     //afterinitial calculations
     size = w/total,
     occupation = w/total,
-    repaintColor = 'rgba(100, 100, 100, 0)'
+    repaintColor = 'rgba(0, 0, 0, 0)'
     colors = [],
     dots = [],
     dotsVel = [];
@@ -27,14 +27,14 @@ var portion = 360/total;
 for(var i = 0; i < total; ++i){
   colors[i] = portion * i; 
   dots[i] = h;
-  dotsVel[i] = 50;
+  dotsVel[i] = 5;
 }
  
 
 function anim(){
   window.requestAnimationFrame(anim); 
   ctx.fillStyle = repaintColor;
-  ctx.fillRect(0, 0, w, h);
+  ctx.fillRect(10, 10, w, h);
   
   for(var i = 0; i < total; ++i){
     var currentY = dots[i] - 1;
@@ -42,7 +42,7 @@ function anim(){
     
     for(var j = i+1; j < i+range && j < total; ++j){
       if(Math.abs(dots[i] - dots[j]) <= range*size){
-        ctx.strokeStyle = 'hsla(hue, 80%, 50%, alp)'.replace('hue', (colors[i] + colors[j] + 360)/2 - 180).replace('alp', lineAlpha);
+        ctx.strokeStyle = 'hsla(hue, 80%, 50%, alp)'.replace('hue', (colors[i] + colors[j] + 360)/2 - 70).replace('alp', lineAlpha);
         ctx.beginPath();
         ctx.moveTo(i * occupation, dots[i]);
         ctx.lineTo(j * occupation, dots[j]);
