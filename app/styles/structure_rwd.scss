@@ -11,17 +11,15 @@
 /*----------*/
 @media (min-width: 30em) { 
   header,footer{ 
-  flex-flow: row wrap; 
+  flex-flow: row wrap;   
+   align-items:center; 
 }
+  nav ul{
+     flex-flow: row  nowrap;   
+  }
 }
 /* more or less DESKTOP */
-@media (min-width: 60em) { 
-  body{  
-  }
-  section ul {  
-     flex-flow: row wrap;
-     align-items: flex-end;  
-  } 
+@media (min-width: 60em) {   
    main{
    @include x-multiple-colored-gradient(
           'left',
@@ -35,4 +33,10 @@
           #f22 100%
       );
   }
+  
+    main ul {  
+   flex-flow: row;
+      align-items: flex-end;   
+  }  
+
 }
