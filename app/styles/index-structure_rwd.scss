@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /*----------------------------------*/
 /*  LEGGERO      LIGHT       LEGER  */
-/*----------------------------------*/
-
+/*----------------------------------*/ 
 /* more or less TABLET */
 /*    Varaibles & Mixins   */ 
 @import 'variables';
@@ -23,28 +22,11 @@ header nav  {
      flex-flow: row  nowrap;   
   }
 }
-/* more or less DESKTOP */
+/* more or less DESKTOP */ 
 @media (min-width: 60em) {    
   header {  
    align-items: stretch;    
-  } 
-   main{
-   @include x-multiple-colored-gradient(
-          'left',
-          #f22 0%,
-          #f2f 15%,
-          #22f 30%,
-          #2ff 45%,
-          #2f2 60%,
-          #2f2 75%,
-          #ff2 90%,
-          #f22 100%
-      );
-  } 
-    main ul {  
-   flex-flow: row;
-      align-items: flex-end;   
-  }   
+  }  
 }
 /*----------------------------------*/
 /*  LEGGERO      LIGHT       LEGER  */

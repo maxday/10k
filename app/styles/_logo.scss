@@ -1,0 +1,159 @@
+ 
+#colorWheel {
+  -webkit-animation: intro 3s ease;
+  height: 20px;
+  width: 20px;
+  margin: 0 auto ;
+  position: relative;
+  -webkit-transform-origin: 50px 150px;
+  -moz-transform-origin: 50px 150px;
+  -ms-transform-origin: 50px 150px;
+  -o-transform-origin: 50px 150px;
+  transform-origin: 50px 150px;
+ 
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+#colorWheel:hover {
+  -webkit-transform: rotate(540deg);
+  -moz-transform: rotate(540deg);
+  -ms-transform: rotate(540deg);
+  -o-transform: rotate(540deg);
+  transform: rotate(540deg);
+}
+#colorWheel span {
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+  border-style: solid;
+  border-width: 150px 50px;
+  box-sizing: border-box;
+}
+#colorWheel span.color01 {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  border-color: #43a1cd transparent transparent transparent;
+}
+#colorWheel span.color02 {
+  -webkit-transform: rotate(36deg);
+  -moz-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  -o-transform: rotate(36deg);
+  transform: rotate(36deg);
+  border-color: #639b47 transparent transparent transparent;
+}
+#colorWheel span.color03 {
+  -webkit-transform: rotate(72deg);
+  -moz-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  -o-transform: rotate(72deg);
+  transform: rotate(72deg);
+  border-color: #9ac147 transparent transparent transparent;
+}
+#colorWheel span.color04 {
+  -webkit-transform: rotate(108deg);
+  -moz-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  -o-transform: rotate(108deg);
+  transform: rotate(108deg);
+  border-color: #e1e23b transparent transparent transparent;
+}
+#colorWheel span.color05 {
+  -webkit-transform: rotate(144deg);
+  -moz-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  -o-transform: rotate(144deg);
+  transform: rotate(144deg);
+  border-color: #f7941e transparent transparent transparent;
+}
+#colorWheel span.color06 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  border-color: #ba3e2e transparent transparent transparent;
+}
+#colorWheel span.color07 {
+  -webkit-transform: rotate(216deg);
+  -moz-transform: rotate(216deg);
+  -ms-transform: rotate(216deg);
+  -o-transform: rotate(216deg);
+  transform: rotate(216deg);
+  border-color: #9a1d34 transparent transparent transparent;
+}
+#colorWheel span.color08 {
+  -webkit-transform: rotate(252deg);
+  -moz-transform: rotate(252deg);
+  -ms-transform: rotate(252deg);
+  -o-transform: rotate(252deg);
+  transform: rotate(252deg);
+  border-color: #662a6c transparent transparent transparent;
+}
+#colorWheel span.color09 {
+  -webkit-transform: rotate(288deg);
+  -moz-transform: rotate(288deg);
+  -ms-transform: rotate(288deg);
+  -o-transform: rotate(288deg);
+  transform: rotate(288deg);
+  border-color: #272b66 transparent transparent transparent;
+}
+#colorWheel span.color10 {
+  -webkit-transform: rotate(324deg);
+  -moz-transform: rotate(324deg);
+  -ms-transform: rotate(324deg);
+  -o-transform: rotate(324deg);
+  transform: rotate(324deg);
+  border-color: #2d559f transparent transparent transparent;
+}
+#colorWheel:before {
+  content: "";
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: absolute;
+  top: -30px;
+  left: -130px;
+  border-radius: 100%;
+  border: 30px solid #ffffff;
+  z-index: 100;
+} 
+#colorWheel:after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  border-radius: 100%;
+  background: #ffffff;
+}
+@-webkit-keyframes intro {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(720deg);
+    -moz-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    -o-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+}

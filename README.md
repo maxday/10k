@@ -34,3 +34,7 @@ asnwers from microsoft: [http://blogs.windows.com/msedgedev/2016/08/15/10k-apart
 - You can similarly use TypeKit to make your fonts extra-sweet
 
 -> a lot of answers here : https://a-k-apart.com/faq favicon does not count, neither images if loaded async
+
+
+#TNX TO:
+- http://codepen.io/towc/pen/ByVJre
