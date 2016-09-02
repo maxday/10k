@@ -48,7 +48,7 @@
     'to top left' 'to left top'
     'to bottom left' 'to left bottom', $value);
 }
- 
+
  header {
     width: 100%;
     padding: 5px 0 0 0;
@@ -60,15 +60,15 @@
     background: white;
 }
 header:before {
-    content: ' '; 
+    content: ' ';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px; 
+    height: 4px;
   @include x-multiple-colored-gradient(
           'left',
-          black 0%, 
+          black 0%,
            yellow 50%,
             green 100%
       );
@@ -98,21 +98,21 @@ footer {
         li{
           display:inline-block;
             height:90px;
-            width:90px;  
+            width:90px;
         }
     }
 }
 
 
 /* from akapart */
- 
+
 body {
     font-size: 1.0rem;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
-    font-smoothing: antialiased; 
+    font-smoothing: antialiased;
     color: #232323;
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
@@ -130,12 +130,12 @@ body {
     min-height: 100vh;
        @include x-multiple-colored-gradient(
           'left',
-          #fff 0%, 
+          #fff 0%,
           #ccc 100%
       );
 }
 
-body{ 
+body{
   @include x-multiple-colored-gradient(
           'left',
           #f22 0%,
@@ -156,7 +156,7 @@ h3 {
     font-weight: 500;
     line-height: 1.1;
     clear: both
-} 
+}
 main {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -182,7 +182,7 @@ footer {
 
 /*-----------*/
 
- 
+
 @keyframes beacon {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35)
@@ -194,9 +194,9 @@ footer {
 
 .chip {
     background: #f3f4f5;
-    color: #23292C; 
-      width: 1em;  
-      height: 1em;  
+    color: #23292C;
+      width: 1em;
+      height: 1em;
     border-radius: 100%;
     display: -webkit-box;
     display: -webkit-flex;

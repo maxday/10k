@@ -3,14 +3,19 @@
 <body class="container">
   <% include partials/header %>
   <main>
-    <div>
-      FORM pour envoie image & Drag Drop
-      </div>
+    <div id="dropHere">Drag n Drop here
+
+    </div>
+    <canvas id="myCanvas" style="display:none;">
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
   </main>
   <% include partials/footer %>
   <!-- build:js h/j.js -->
   <!--[if gt IE 8]><!-->
   <script src='scripts/main.js' async defer='defer'></script>
+  <script src='static/scripts/colorAnalysis.js'></script>
   <!--<![endif]-->
   <!-- endbuild -->
 </body>
