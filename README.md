@@ -2,15 +2,10 @@
 Inspiring the Web with Just 10k.
 [a-k-apart.com](https://a-k-apart.com/)
 
-# To setup the server :
-- make sure you have nodejs installed
-- go to the /js folder
+# To launch the app :
 - npm install
-
-# To run the server :
-- go to the /js folder
 - npm start
-- go to :   http://localhost:8080/load/ffcc44,0167fb,01ff45
+- go to :   http://localhost:8080
 
 
 ## Nice articles / resource / inspirations
