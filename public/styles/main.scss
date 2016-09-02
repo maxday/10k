@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+@mixin x-multiple-colored-gradient ($args...) {
+
+	$gradient: ();
+	$pos: nth($args, 1);
+	$pos_newsyntax: ();
+
+	@if not is-valid-keyword-direction($pos) {
+		$pos: 'top';
+	}
+
+	// New Syntax
+	@if $pos == 'top' {
+		$pos_newsyntax: 'to bottom';
+	} @else if $pos == 'right' {
+		$pos_newsyntax: 'to left';
+	} @else if $pos == 'bottom' {
+		$pos_newsyntax: 'to top';
+	} @else if $pos == 'left' {
+		$pos_newsyntax: 'to right';
+	}
+
+	@each $g in $args {
+		@if not is-valid-keyword-direction($g) {
+			$gradient: append($gradient, $g, comma);
+		}
+	}
+
+	background: -webkit-linear-gradient(unquote($pos), $gradient);
+	background:         linear-gradient(unquote($pos_newsyntax), $gradient);
+}
+@function is-valid-keyword-direction($value) {
+  @return not not index(
+    'top' 'right' 'bottom' 'left'
+    'to top' 'to right' 'to bottom' 'to left'
+    'to top right' 'to right top'
+    'to bottom right' 'to right bottom'
+    'to top left' 'to left top'
+    'to bottom left' 'to left bottom', $value);
+}
+ 
+ header {
+    width: 100%;
+    padding: 5px 0 0 0;
+    overflow: hidden;
+    border-bottom: solid #ccc 1px;
+    -webkit-box-shadow: 0 2px 0 0 rgba(0,0,0,0.05);
+    -moz-box-shadow: 0 2px 0 0 rgba(0,0,0,0.05);
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.05);
+    background: white;
+}
+header:before {
+    content: ' '; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; 
+  @include x-multiple-colored-gradient(
+          'left',
+          black 0%, 
+           yellow 50%,
+            green 100%
+      );
+}
+
+.blured {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border-top: solid #ccc 1px;
+    background: #fff;
+    color:grey;
+}
+
+#result{
+    ul{
+        li{
+          display:inline-block;
+            height:90px;
+            width:90px;  
+        }
+    }
+}
+
+
+/* from akapart */
+ 
+body {
+    font-size: 1.0rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased; 
+    color: #232323;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    margin: 0 auto;
+    min-width: 240px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 100vh;
+       @include x-multiple-colored-gradient(
+          'left',
+          #fff 0%, 
+          #ccc 100%
+      );
+}
+
+body{ 
+  @include x-multiple-colored-gradient(
+          'left',
+          #f22 0%,
+          #f2f 15%,
+          #22f 30%,
+          #2ff 45%,
+          #2f2 60%,
+          #2f2 75%,
+          #ff2 90%,
+          #f22 100%
+      );
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: 500;
+    line-height: 1.1;
+    clear: both
+} 
+main {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0 .5em;
+    margin: 1.375rem auto 0
+}
+footer {
+    background: #fff;
+    color: #069;
+    margin-top: 1.375rem;
+    padding: 1.375rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+/*-----------*/
+
+ 
+@keyframes beacon {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.35)
+  }
+  100% {
+    box-shadow: 0 0 0 2rem transparent
+  }
+}
+
+.chip {
+    background: #f3f4f5;
+    color: #23292C; 
+      width: 1em;  
+      height: 1em;  
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    box-shadow: 0 0.2em 0.35em -0.15em rgba(35, 41, 44, 0.5);
+}
+.beacon-2 {
+    -webkit-animation: beacon 1s infinite linear;
+    animation: beacon 1s infinite linear;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+}

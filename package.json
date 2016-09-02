@@ -1,7 +1,18 @@
 {
+  "name": "10k",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": ">=4"
+    "node": "6.3.0"
+  },
+  "dependencies": {
+    "ejs": "2.5.1",
+    "express": "4.9.8",
+    "node-server-screenshot":"0.0.2"
   },
   "devDependencies": {
     "browser-sync": "^2.2.1",

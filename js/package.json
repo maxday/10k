@@ -2,7 +2,7 @@
   "name": "10k",
   "main": "index.js",
   "scripts": {
-    "start": "npm install && node index.js"
+    "start": "gulp"
   },
   "version": "0.0.1",
   "dependencies": {

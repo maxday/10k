@@ -2,22 +2,33 @@
 <% include partials/head %>
 <body class="container">
   <% include partials/header %>
+
+
+
+
+
   <main>
-    Load colors
-    <table border=1>
-      <thead>
-        <tr>
-          <th>Colors</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% for(var i = 0 ; i < colors.split(",").length ; i++) { %>
-          <tr>
-            <td style='background-color : #<%= colors.split(",")[i] %>'><%= colors.split(",")[i] %></td>
-          </tr>
-        <% } %>
-      </tbody>
-    </table>
+    <ul id='res'>
+
+
+      <% for(var i = 0 ; i < colors.split(",").length ; i++) { %>
+        <li>
+          <%= colors.split(",")[i] %>
+        </li>
+      <% } %>
+
+
+    </ul>
+
+  </main>
+
+
+
+
+
+
+
+
 
     <hr />
     <div class="export">
@@ -53,7 +64,7 @@
 
   </main>
   <% include partials/footer %>
-  <script src="/static/exportAction.js"></script>
-  <script src="/static/takeScreenshot.js"></script>
+  <script src="/static/scripts/exportAction.js"></script>
+  <script src="/static/scripts/takeScreenshot.js"></script>
 </body>
 </html>

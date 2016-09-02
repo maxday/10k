@@ -5,6 +5,7 @@ dist
 .tmp
 bower_components
 test/bower_components
-js/node_modules
-js/public/screenshots
+node_modules
+public/screenshots
 npm-debug.log
+server.log

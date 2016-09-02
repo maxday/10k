@@ -1,0 +1,32 @@
+ .logo {
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  border: 20px solid #1abc9c;
+  border-right-color: rgba(255,255,255,0);
+  border-radius: 100%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+}
+ .logo:before {
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  border: 20px solid green;
+  border-right-color: rgba(255,255,255,0);
+  border-radius: 100%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+
+
+}
+ .logo:after {
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+  border: 20px solid red;
+  border-right-color: rgba(255,255,255,0);
+  border-radius: 100%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+
+}

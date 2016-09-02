@@ -9,7 +9,7 @@ var app = express();
 app.use('/static', express.static('public'));
 
 app.get('/', function (request, response) {
-  response.redirect("/load/1abc9c,3498db,9b59b6,34495e,7f8c8d,e67e22");
+  response.render('home.ejs' );
 });
 
 app.get('/load/:colors', function (request, response) {

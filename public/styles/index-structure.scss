@@ -1,0 +1,126 @@
+ /* responsive for MOBILE PHONE */
+ /* MOBILE IFRST APPROACH  */
+/*-------------------------*/
+/*    Varaibles & Mixins   */
+
+@import 'variables';
+@import 'mixins'; 
+@import 'logo';
+
+ .logo {  
+    
+  border: 20px solid #1abc9c;
+  border-right-color: rgba(255,255,255,0); 
+  border-radius: 100%; 
+ 
+} 
+ .logo:before { 
+  content:''; 
+  position: absolute;
+  width: 5px;
+    height: 20px;
+    display:block;
+   background: red;
+   border:none;
+     border-radius: 0 5px 0 0; 
+} 
+ .logo:after { 
+ 
+
+ 
+} 
+
+/* -----------------------*/
+::-moz-selection  {   
+color:green;
+ background: yellow;
+}
+::selection   {  
+   color:green;  
+ background: yellow; 
+}
+a:link,
+a:visited,
+button {
+    transition: all .25s ease
+}
+body,
+ol,
+ul { 
+    line-height: 1.4;
+    list-style:none;
+    padding:0; 
+li a{ text-decoration: none;}
+} 
+ 
+* {
+    margin-top: 0;
+    margin-bottom: 0;
+    box-sizing: border-box
+} 
+ body {   
+   margin:0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;   
+  } 
+header,footer{
+background:yellow; 
+  display: flex; 
+  flex-flow: column wrap; 
+  justify-content: space-between;  
+  text-align:center;
+} 
+main{  /*
+   @include x-multiple-colored-gradient(
+          'left',
+          #43a1cd 10%,
+          #639b47 20%,
+          #9ac147 30%,
+          #e1e23b 40%,
+          #f7941e 50%,
+          #ba3e2e 60%,
+          #9a1d34 70%,
+          #662a6c 80%,
+          #272b66 90%,
+               #2d559f 100%
+      ); 
+*/
+
+ 
+
+   flex:1;   
+    display: flex; 
+    flex-flow: row wrap;  
+    justify-content: center;  
+    align-items: center;
+    } 
+
+header nav  {      
+   display: flex; 
+     flex-flow: column  nowrap;   
+    } 
+nav ul {
+ /*  
+   flex-flow: row wrap;  */
+    display: flex;     
+        flex-flow: column  nowrap;   
+  li{
+    background: lightgreen; margin:3px;
+  }
+   .on  {
+  background: magenta;
+}
+} 
+footer{
+  font-size: 0.8em;  
+ ul li{ margin: 0;}
+}
+nav  ul li{ margin: 0;} 
+ 
+ 
+main div{
+   background: red;
+   position:absolute;
+  
+}
