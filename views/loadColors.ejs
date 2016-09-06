@@ -2,43 +2,23 @@
 <% include partials/head %>
 <body class="container">
   <% include partials/header %>
-
-
-
-
-
+ 
   <main>
-    <ul id='res'>
-
-
+    <ul id='res'>  
       <% for(var i = 0 ; i < colors.split(",").length ; i++) { %>
         <li>
           <%= colors.split(",")[i] %>
         </li>
-      <% } %>
-
-
-    </ul>
-
-  </main>
-
-
-
-
-
-
-
-
-
-    <hr />
+      <% } %> 
+    </ul> 
+  </main>  <hr />
     <div class="export">
       Export :
       <ul>
         <li><a href="/export/sass/<%= colors %>" id="exportSass">Sass</a></li>
         <li><a href="/export/less/<%= colors %>" id="exportLess">Less</a></li>
       </ul>
-      <div id="exportResult">
-
+      <div id="exportResult"> 
          <% if(typeof exportColor != 'undefined') { %>
            <% for(var i = 0 ; i < exportColor.length ; i++) { %>
              <%= exportColor[i]; %>
@@ -46,8 +26,7 @@
            <% } %>
          <% } %>
       </div>
-    </div>
-
+    </div> 
     <hr />
     <div class="screenshot">
       <form action="/screenshot" method="GET">
@@ -60,8 +39,7 @@
         <img src = "/static/screenshots/<%= screenshotImg %>" width=800 />
         aaa
       <% } %>
-    </div>
-
+    </div> 
   </main>
   <% include partials/footer %>
   <script src="/static/scripts/exportAction.js"></script>

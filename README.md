@@ -31,5 +31,7 @@ asnwers from microsoft: [http://blogs.windows.com/msedgedev/2016/08/15/10k-apart
 -> a lot of answers here : https://a-k-apart.com/faq favicon does not count, neither images if loaded async
 
 
-#TNX TO:
+#TNX TO: (aknowlegment and inspiration used)
 - http://codepen.io/towc/pen/ByVJre
+- http://codepen.io/Lewitje/pen/doJRBX
+- https://codepen.io/afonsobarros/pen/reJwEE
