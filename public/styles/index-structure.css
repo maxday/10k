@@ -2,6 +2,24 @@
 /* MOBILE IFRST APPROACH  */
 /*-------------------------*/
 /*    Varaibles & Mixins   */
+.logo {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background: green;
+}
+
+.logo svg {
+  fill: red;
+  stroke: green;
+  stroke-width: 2px;
+}
+
+.logo div {
+  float: left;
+  position: absolute;
+}
+
 /* -----------------------*/
 ::-moz-selection {
   color: green;
@@ -74,7 +92,7 @@ main {
           #662a6c 80%,
           #272b66 90%,
                #2d559f 100%
-      );
+      ); 
 */
   -webkit-box-flex: 1;
           flex: 1;
@@ -94,7 +112,7 @@ header nav {
 }
 
 nav ul {
-  /*
+  /*  
    flex-flow: row wrap;  */
   display: -webkit-box;
   display: flex;
@@ -125,8 +143,4 @@ nav ul li {
 main div {
   background: red;
   position: absolute;
-}
-
-.onDragOver {
-  background-color: green;
 }

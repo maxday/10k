@@ -3,16 +3,20 @@
 <body class="container">
   <% include partials/header %>
   <main>
-   
+   	<ul class="colors">
+					<li data-color="#2ecc71"></li>
+					<li data-color="#D64A4B"></li>
+					<li data-color="#8e44ad"></li>
+					<li class="active-color" data-color="#46a1de"></li>
+					<li data-color="#bdc3c7"></li>
+				</ul>
     <canvas id=c style="display:none;">
       Your browser does not support the HTML5 canvas tag.
     </canvas>
   <div id="dropHere">
       FORM TO UPLOAD & Drag Drop 
       </div> 
-  </main>
- 
-
+  </main> 
   <% include partials/footer %>
   <!-- build:js h/j.js -->
   <!--[if gt IE 8]><!-->

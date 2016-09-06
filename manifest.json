@@ -1,7 +1,7 @@
 {
-  "name": "10k Apart",
-  "short_name": "10k Apart",
-  "description": "Inspiring the Web with Just 10k",
+  "name": "10kolors",
+  "short_name": "10kolors",
+  "description": "No more secret Kolors in your images!",
   "icons": [{
       "src": "/i/c/o.svg",
       "sizes": "192x192",

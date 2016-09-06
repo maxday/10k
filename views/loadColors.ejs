@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<% include partials/head %>
+<% include partials/head-res %>
 <body class="container">
-  <% include partials/header %>
+  <% include partials/header-res %>
  
   <main>
+    	<ul class="colors">
+					<li data-color="#2ecc71"></li>
+					<li data-color="#D64A4B"></li>
+					<li data-color="#8e44ad"></li>
+					<li class="active-color" data-color="#46a1de"></li>
+					<li data-color="#bdc3c7"></li>
+				</ul>
+
+
     <ul id='res'>  
       <% for(var i = 0 ; i < colors.split(",").length ; i++) { %>
         <li>
