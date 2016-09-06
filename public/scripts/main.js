@@ -4,7 +4,7 @@
 
     //initial
  w = c.width = window.innerWidth,
-     h = c.height = window.innerHeight -93,
+     h = c.height = window.innerHeight -89,
     ctx = c.getContext('2d'),  
     
     //parameters

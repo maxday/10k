@@ -2,25 +2,6 @@
 /* MOBILE IFRST APPROACH  */
 /*-------------------------*/
 /*    Varaibles & Mixins   */
-.logo {
-  width: 50px;
-  height: 50px;
-  overflow: hidden;
-  background: green;
-}
-
-.logo svg {
-  fill: red;
-  stroke: green;
-  stroke-width: 2px;
-}
-
-.logo div {
-  float: left;
-  position: absolute;
-}
-
-/* -----------------------*/
 ::-moz-selection {
   color: green;
   background: yellow;
@@ -66,8 +47,28 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
+.logo {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background: green;
+}
+
+.logo svg {
+  fill: red;
+  stroke: green;
+  stroke-width: 2px;
+}
+
+.logo div {
+  float: left;
+  position: absolute;
+}
+
+/* -----------------------*/
 header, footer {
   background: yellow;
   display: -webkit-box;

@@ -5,49 +5,18 @@
 
 @import 'variables';
 @import 'mixins';
+@import 'common';
 @import 'logo';
 
 /* -----------------------*/
-::-moz-selection  {   
-color:green;
- background: yellow;
-}
-::selection   {  
-   color:green;  
- background: yellow;
-}
-a:link,
-a:visited,
-button {
-    transition: all .25s ease
-}
-body,
-ol,
-ul {
-    line-height: 1.4;
-    list-style:none; 
-    padding:0; 
-li a{ text-decoration: none;}
-} 
  
-* {
-    margin-top: 0;
-    margin-bottom: 0;
-    box-sizing: border-box
-} 
- body {   
-   margin:0;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;   
-  }
-
 header,footer{
 background:yellow; 
   display: flex; 
   flex-flow: column wrap; 
   justify-content: space-between;  
   text-align:center;
+ box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08);
 }
     main #res{
        @include x-multiple-colored-gradient(
