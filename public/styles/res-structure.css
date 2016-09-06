@@ -2,6 +2,24 @@
 /* MOBILE IFRST APPROACH  */
 /*-------------------------*/
 /*    Varaibles & Mixins   */
+.logo {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background: green;
+}
+
+.logo svg {
+  fill: red;
+  stroke: green;
+  stroke-width: 2px;
+}
+
+.logo div {
+  float: left;
+  position: absolute;
+}
+
 /* -----------------------*/
 ::-moz-selection {
   color: green;
@@ -126,14 +144,56 @@ nav ul li {
   margin: 0;
 }
 
-/* hide show image details 
- .dt,
-.show,
-.hide:target {
-  display: none;
+/*------------*/
+.colors {
+  text-align: center;
+  padding-top: 20px;
 }
-.hide:target + .show,
-.hide:target ~ .dt {
-  display: block;
+
+.colors > li {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
-*/
+
+.colors > li:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  border-bottom: 10px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.colors > li.active-color {
+  -webkit-transform: scale(1.2) translateY(-10px);
+  transform: scale(1.2) translateY(-10px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 20px solid rgba(0, 0, 0, 0.15);
+}
+
+.colors > li:nth-child(1) {
+  background-color: #2ecc71;
+}
+
+.colors > li:nth-child(2) {
+  background-color: #D64A4B;
+}
+
+.colors > li:nth-child(3) {
+  background-color: #8e44ad;
+}
+
+.colors > li:nth-child(4) {
+  background-color: #46a1de;
+}
+
+.colors > li:nth-child(5) {
+  background-color: #bdc3c7;
+}

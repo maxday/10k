@@ -34,4 +34,3 @@ asnwers from microsoft: [http://blogs.windows.com/msedgedev/2016/08/15/10k-apart
 #TNX TO: (aknowlegment and inspiration used)
 - http://codepen.io/towc/pen/ByVJre
 - http://codepen.io/Lewitje/pen/doJRBX
-- https://codepen.io/afonsobarros/pen/reJwEE
