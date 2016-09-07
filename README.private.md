@@ -1,4 +1,78 @@
 
+
+
+
+
+- aldo :
+  - 2 ou 3 pages interfaces (homepage (upload), visualiation, pie chart?)
+  - responsive mobile
+  - sass
+  - sort by frequency, sort by color
+  - choose le nom du projet
+  - made with love, link github
+  - at the end, produce a simple gif
+
+- max :
+  - algo sur node (si pas de js)
+  - integrer dans projet (+ readme)
+  - upload image JS/http
+  - readme
+  - image en ligne
+  - print screen server side
+
+- idees :
+  - couleur primaire
+  - trier selon distance couleur
+  - ajuster la largeur selon pourcetage couleur
+  - color picker
+  - export LESS, CSS, SASS, photoshop
+  - lien full http pour partager (personal url)
+  - fine tuning du export, minification etc
+  - disclaimer, nothing is saved
+  - pointor on picture with color (mouse over sur les stripes, move le pointor)
+  - tester back button (no retry)
+
+
+-------------
+-------------
+-------------
+## Name choice:
+- pickolor (exist)
+- pikolor (exist but i think we can use it because has nothing to do with colors and web)
+- picolor (available)
+- colorWizard (available choice also if too long)
+- KolorWizard
+- Kolor (exist) http://kolor.moro.es/
+- 10kolor (available) to refere to the 10k project
+- 10kolorize (available) to refere to the 10k project
+- Kooloor ( KT) (available)
+- kolorTool (exist but i think we can use it)
+- kolorim (available)
+- KolorMagic (exist but i think we can use it because has nothing to do with colors and web) http://www.kolormagic.co.uk/
+- KolorMagicTool (available even if long we could call the project KMT)
+- magiKpiK (available) ( a me piace :-) )
+- pikerAM (available Picker aldo Maxime) :-)
+- colorAM 
+- KolorAM 
+- Picker & co (avaialble)
+- Pikker
+- Pikker
+- Coloribux
+- ColorPi
+- ColorPimg
+- ColorImg
+
+#competitors
+- https://coolors.co
+
+#competitors: :-) 
+- http://imagecolorpicker.net/
+- http://www.colorcodepicker.com/
+- http://html-color-codes.info/colors-from-image/
+- http://www.ginifab.com/feeds/pms/pms_color_in_image.php
+-------------
+-------------
+-------------
 # Ideas of what to develop 
 - a desktop replicated in css html. (http://www.alessioatzeni.com/mac-osx-lion-css3/)
 - a mobile phone recreated in pure css.
