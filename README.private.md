@@ -1,16 +1,15 @@
 
-
-
-
-
 - aldo :
-  - 2 ou 3 pages interfaces (homepage (upload), visualiation, pie chart?)
-  - responsive mobile
-  - sass
-  - sort by frequency, sort by color
-  - choose le nom du projet
-  - made with love, link github
-  - at the end, produce a simple gif
+  - 2 ou 3 pages interfaces (homepage (upload), visualiation, pie chart?) 
+  - responsive mobile ✔
+  - sass ✔
+  - sort by frequency, sort by color (settings page)
+  - choose le nom du projet ✔
+  - made with love, link github ✔
+  - I have to better divide the sass (all inside @media is not counted in 10k)
+  - add disclaimer page
+  - add about page that explain the project (at the end, produce a simple gif)
+
 
 - max :
   - algo sur node (si pas de js)
