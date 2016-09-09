@@ -36,13 +36,7 @@
          <% } %>
       </div>
     </div> 
-    <hr />
-    <div class="screenshot">
-      <form action="/screenshot" method="GET">
-        <input type="text" name="takeScreenshotURL" id="takeScreenshotURL" value="http://stackoverflow.com" />
-        <input type="submit" value="Get color from website" id="takeScreenshot" />
-      </form>
-    </div>
+    <hr /> 
     <div id="screenshotResult">
       <% if(typeof screenshotImg != 'undefined') { %>
         <img src = "/static/screenshots/<%= screenshotImg %>" width=800 />
@@ -51,7 +45,11 @@
     </div> 
   </main>
   <% include partials/footer %>
+     <!-- build:js h/j.js -->
+        <!--[if gt IE 8]><!--> 
   <script src="/static/scripts/exportAction.js"></script>
   <script src="/static/scripts/takeScreenshot.js"></script>
+        <!--<![endif]-->
+        <!-- endbuild -->
 </body>
 </html>

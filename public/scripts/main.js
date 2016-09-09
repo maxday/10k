@@ -16,7 +16,7 @@ function resize() {
     //afterinitial calculations
     size = w / total,
     occupation = w / total,
-    repaintColor = 'rgba(0, 0, 0, .04)'
+    repaintColor = 'rgba(255, 255, 255, .019 )'
   colors = [],
     dots = [],
     dotsVel = [];
