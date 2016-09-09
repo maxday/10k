@@ -7,42 +7,9 @@
         <canvas id=c>
           Your browser does not support the HTML5 canvas tag.
         </canvas>
-    
- <style>
-   .onDragOver{
-
-   }
-       
-    #dropHere{
- text-align:center;
-      width: auto;
-    height: 137px;
-    border: 1px dashed #d3dce6;
-    border-radius: 25px;
-    margin:2%;
-    position: relative;
-    color: #d3dce6;
-    cursor: pointer;
-    transition: all .1s ease-in-out;
-    overflow:hidden;
-     }
-     #dropHere:hover, #dropHere.onDragOver{
-       color:white;
-    
-       background:green;
-     }
-     #image-picker-select-browse-input {
-    opacity: 0;
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
-}
-   </style>
+     
   <div  >    
-      <div id="dropHere">
-   
- 
- 
+      <div id="dropHere"> 
  <span> Browse an image or drag it here.</span>
 <input type="file" id=image-picker-select-browse-input  >
  
@@ -60,6 +27,16 @@
       </form>
  </div>
       </main>
+
+
+        <div id='screenshotResult'>
+      <% if(typeof screenshotImg != 'undefined') { %>
+        <img src = '/static/screenshots/<%= screenshotImg %>' width=800 />
+        aaa
+      <% } %>
+    </div> 
+
+    
       <% include partials/footer %>
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->

@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <% include partials/head-res %>
-<body class="container">
+<body class='container'>
   <% include partials/header-res %>
- 
-  <main>
-    	<ul class="colors">
-					<li data-color="#2ecc71"></li>
-					<li data-color="#D64A4B"></li>
-					<li data-color="#8e44ad"></li>
-					<li class="active-color" data-color="#46a1de"></li>
-					<li data-color="#bdc3c7"></li>
-				</ul>
-
-
-    <ul id='res'>  
-      <% for(var i = 0 ; i < colors.split(",").length ; i++) { %>
-        <li>
-          <%= colors.split(",")[i] %>
-        </li>
-      <% } %> 
-    </ul> 
-  </main>  <hr />
-    <div class="export">
-      Export :
+    <div class='export'>
+      Export Palette:
       <ul>
-        <li><a href="/export/sass/<%= colors %>" id="exportSass">Sass</a></li>
-        <li><a href="/export/less/<%= colors %>" id="exportLess">Less</a></li>
+        <li><a href='/export/sass/<%= colors %>' id='exportSass'>Scss</a></li>
+        <li><a href='/export/less/<%= colors %>' id='exportLess'>Less</a></li>
+            <li><a href='#' id='exportLess'>pdf</a></li>
+               <li><a href='#' id='exportLess'>url</a></li>
+                  <li><a href='#' id='exportLess'>png</a></li>
+                      <li><a href='#' id='exportLess'>photoshop</a></li>
       </ul>
-      <div id="exportResult"> 
+      <div id='exportResult'> 
          <% if(typeof exportColor != 'undefined') { %>
            <% for(var i = 0 ; i < exportColor.length ; i++) { %>
              <%= exportColor[i]; %>
@@ -36,19 +21,30 @@
          <% } %>
       </div>
     </div> 
-    <hr /> 
-    <div id="screenshotResult">
-      <% if(typeof screenshotImg != 'undefined') { %>
-        <img src = "/static/screenshots/<%= screenshotImg %>" width=800 />
-        aaa
-      <% } %>
-    </div> 
-  </main>
+  <main> 
+
+ 
+    <ul id='res' class='colors'   style="  background: linear-gradient( to left , <% for(var i = 0 ; i < colors.split(',').length ; i++) { %> 
+      <%   percent = 100/colors.split(',').length * i;
+        %>
+     #<%= colors.split(',')[i] %> <%= percent %>% ,
+ 
+     <% if( i ==   (colors.split(',').length)-1  ) { %>
+    #<%= colors.split(',')[i] %>   100% 
+      <%  } %>
+     
+     <% } %> );"  >  
+      <% for(var i = 0 ; i < colors.split(',').length ; i++) { %>
+        <li   style="background-color:#<%= colors.split(',')[i] %>">
+          #<%= colors.split(',')[i] %>
+        </li>
+      <% } %> 
+    </ul> 
+  </main>    
   <% include partials/footer %>
      <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!--> 
-  <script src="/static/scripts/exportAction.js"></script>
-  <script src="/static/scripts/takeScreenshot.js"></script>
+  <script src='/static/scripts/exportAction.js'></script> 
         <!--<![endif]-->
         <!-- endbuild -->
 </body>

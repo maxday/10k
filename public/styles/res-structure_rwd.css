@@ -20,6 +20,11 @@
   nav ul {
     flex-flow: row  nowrap;
   }
+  main #res {
+    border: 2px solid red;
+    background: -webkit-linear-gradient(top);
+    background: linear-gradient(top);
+  }
 }
 
 /* more or less DESKTOP */
@@ -30,8 +35,15 @@
             align-items: stretch;
   }
   main #res {
-    background: -webkit-linear-gradient(left, #f22 0%, #f2f 15%, #22f 30%, #2ff 45%, #2f2 60%, #2f2 75%, #ff2 90%, #f22 100%);
-    background: linear-gradient(to right, #f22 0%, #f2f 15%, #22f 30%, #2ff 45%, #2f2 60%, #2f2 75%, #ff2 90%, #f22 100%);
+    /*  @include x-multiple-colored-gradient(
+          'left', 
+          #f2f 15%,
+          #22f 30%,
+          #2ff 45%, 
+          #2f2 75%,
+          #ff2 90%,
+          #f22 100%
+      );*/
   }
   main ul {
     flex-flow: row;

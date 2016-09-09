@@ -145,3 +145,30 @@ main div {
   background: red;
   position: absolute;
 }
+
+#dropHere {
+  text-align: center;
+  width: auto;
+  height: 137px;
+  border: 1px dashed #d3dce6;
+  border-radius: 25px;
+  margin: 2%;
+  position: relative;
+  color: #d3dce6;
+  cursor: pointer;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  overflow: hidden;
+}
+
+#dropHere:hover, #dropHere.onDragOver {
+  color: white;
+  background: green;
+}
+
+#image-picker-select-browse-input {
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
