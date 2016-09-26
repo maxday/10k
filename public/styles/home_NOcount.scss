@@ -1,12 +1,15 @@
 @charset "UTF-8";
-/*----------------------------------*/
-/*  LEGGERO      LIGHT       LEGER  */
-/*----------------------------------*/ 
-/* more or less TABLET */
+/*----------------------------------------*/
+/*  PUT THE MOST OF CSS INSIDE  ----------*/
+/* ------- DO NOT COUNT IN THE 10K -------*/
+/*----------------------------------------*/ 
+
+
 /*    Varaibles & Mixins   */ 
 @import 'variables'; 
 @import 'mixins';
 /*----------*/
+/* more or less TABLET */
 @media (min-width: 30em) { 
   header,footer{ 
   flex-flow: row wrap;   
@@ -28,6 +31,3 @@ header nav  {
    align-items: stretch;    
   }  
 }
-/*----------------------------------*/
-/*  LEGGERO      LIGHT       LEGER  */
-/*----------------------------------*/

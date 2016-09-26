@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<% include ../partials-en/head %>
+
+  <body class="container">
+    <% include ../partials-en/header %>
+      <main>
+        Export colors
+        <hr />
+        <% for(var i = 0 ; i < exportArray.length ; i++) { %>
+          <%=  exportArray[i] %>
+            <br />
+            <% } %>
+              <hr />
+      </main>
+      <% include ../partials-en/footer %>
+  </body>
+
+  </html>

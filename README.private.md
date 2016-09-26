@@ -1,4 +1,13 @@
 
+
+# How to upload the project:
+on th ewebsite the projects are ordereb by name at the moment "10k name" arrive befroe then "10kname"
+- We will ahve to use a name like "10k Apart 10Koolors project"
+- to be more sure the people neame should be Aldo & Max to be even more sure that using letter A in case they order by author.
+- IT WILL BE BETTER TO BE ON THE HOMEPAGE AND FIRST page- to be even more sure we should start the description with a letter "A"
+
+
+## TO DO:
 - aldo :
   - 2 ou 3 pages interfaces (homepage (upload), visualiation, pie chart?) 
   - responsive mobile ✔
@@ -10,6 +19,9 @@
   - add disclaimer page
   - add about page that explain the project (at the end, produce a simple gif)
 
+## NEW TO do:
+- 1 folder for each language.
+- gzip via node i guess
 
 - max :
   - algo sur node (si pas de js)

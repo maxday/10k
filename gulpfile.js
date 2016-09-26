@@ -15,11 +15,11 @@ gulp.task('styles', () => {
     .pipe($.plumber())
   //.pipe($.sourcemaps.init())
     .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
+      outputStyle: 'compressed',
+      precision: 2,
       includePaths: ['.']
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 1 versions', 'Firefox ESR']}))
+    .pipe($.autoprefixer({browsers: ['> 1%', 'last 1 versions']}))
     //.pipe($.sourcemaps.write())
     .pipe(gulp.dest('public/styles'))
     .pipe(reload({stream: true}));
