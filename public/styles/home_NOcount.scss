@@ -11,24 +11,27 @@
 /*----------*/
 /* more or less TABLET */
 @media (min-width: 30em) { 
-  header,footer{  align-items: stretch;    
- // flex-flow: row wrap;   
-} 
-header,footer{ 
-  display: flex; 
+    nav ul{ 
+     flex-flow: row  nowrap;   
+  }
+  header,footer{ 
+ /* display: flex; 
   flex-flow: column wrap; 
-  justify-content: space-between;   
+  justify-content: space-between;   */
 } 
+  header,footer{  //align-items: stretch;   
+  display:flex; 
+   flex-flow: row nowrap;   
+} 
+
 header nav  {      
      flex-flow: row nowrap;   
     }
     header nav  ul li    {
       display:flex;
            align-items:center;
-    }  
-  nav ul{ 
-     flex-flow: row  nowrap;   
-  }
+    }   
+
   // 
 footer nav{ 
  .on ,a:hover { 
@@ -42,7 +45,9 @@ header nav{
 }
 
 }
-
+footer{
+ // background: red;
+}
 }
 
 
@@ -51,7 +56,9 @@ header nav{
   header {  
    align-items: stretch;    
   }  
-
+footer{
+ // background:green;
+}
 
   
 }
