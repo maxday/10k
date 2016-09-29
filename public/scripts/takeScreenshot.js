@@ -1,7 +1,7 @@
 var requestObj;
 var exportResult;
 
-document.getElementById("takeScreenshot").addEventListener('click', takeScreenshot);
+//document.getElementById("takeScreenshot").addEventListener('click', takeScreenshot);
 
 function takeScreenshot(e) {
   e.preventDefault();

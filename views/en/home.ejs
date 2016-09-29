@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<% include ../partials-en/head-home %> 
+<% include ../partials-en/head-home %>
   <body >
     <% include ../partials-en/header-home %>
       <main>
@@ -13,9 +13,7 @@
             <input type='file' id=imgsel>
           </div>
 
-          <form action='/screenshot' method='GET'> 
-            <label for='cc'>Remote online image</label>
-            <input type='text' class='input-l' id='cc' placeholder='http://'>
+          <form action='/screenshot' method='GET'>
             <label for='scrSht'>Website Automatic Print-Screen</label>
             <input type='text' name='scrSht' id='scrSht' placeholder='any http:// website' />
             <button> Kolorise  </button>
@@ -23,6 +21,9 @@
         </div>
       </main>
 
+      <canvas id="myCanvas" style="display:none;">
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
 
       <div id='screenshotResult'>
         <% if(typeof screenshotImg != 'undefined') { %>
@@ -34,11 +35,11 @@
       <% include ../partials-en/footer %>
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->
-     <script src='static/scripts/main.js' async defer='defer'></script>  
+     <script src='static/scripts/main.js' async defer='defer'></script>
         <script src='static/scripts/colorAnalysis.js'></script>
         <script src='static/scripts/takeScreenshot.js'></script>
         <!--<![endif]-->
         <!-- endbuild -->
   </body>
 
-  </html> 
+  </html>

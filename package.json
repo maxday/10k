@@ -12,7 +12,8 @@
   "dependencies": {
     "ejs": "2.5.1",
     "express": "4.9.8",
-    "node-server-screenshot":"0.0.2"
+    "get-image-colors": "^1.5.0",
+    "node-server-screenshot": "0.0.2"
   },
   "devDependencies": {
     "browser-sync": "^2.2.1",

@@ -2,6 +2,8 @@ var express            = require("express");
 var ejs                = require('ejs');
 var screenshot         = require("node-server-screenshot");
 
+const getColors = require("get-image-colors");
+
 var port = 8080;
 /*var LANGUAGE to manage & ADD */
 var lang = "en";
@@ -18,9 +20,13 @@ app.get('/en/load/:colors', function (request, response) {
 });
 
 app.get('/screenshot/', function (request, response) {
-  var filename = "screen_" + (new Date().getTime()) + Math.random();
-  screenshot.fromURL(request.param('takeScreenshotURL'), "public/screenshots/" + filename, function(){
-    response.render('en/loadColors.ejs', { colors : "1abc9c,3498db,9b59b6,34495e,7f8c8d,e67e22", screenshotImg : filename } );
+  var filename = "screen_" + (new Date().getTime()) + Math.random() + ".png";
+  screenshot.fromURL(request.param('scrSht'), "public/screenshots/" + filename, function(){
+    getColors(__dirname + "/public/screenshots/" + filename, function(err, colors){
+      var friendlyColor = transformColors(colors);
+      response.redirect('/en/load/' + friendlyColor);
+    })
+
   });
 
 })
@@ -93,3 +99,30 @@ function sass(colors) {
 }
 
 app.listen(port);
+
+function computeHex(col, nb) {
+  var r = (parseInt(col[0], 10)).toString(16);
+  var g = (parseInt(col[1], 10)).toString(16);
+  var b = (parseInt(col[2], 10)).toString(16);
+  if(r.length == 1) {
+    r = "0"+r;
+  }
+  if(g.length == 1) {
+    g = "0"+g;
+  }
+  if(b.length == 1) {
+    b = "0"+b;
+  }
+  return r+""+g+""+b;
+}
+
+function transformColors(colors) {
+
+  var colorsToReturn = "";
+  for(var i=0; i<colors.length; ++i) {
+    colorsToReturn += computeHex(colors[i]._rgb) + ",";
+  }
+  colorsToReturn = colorsToReturn.substring(0, colorsToReturn.length - 1);
+  console.log(colorsToReturn);
+  return colorsToReturn;
+}

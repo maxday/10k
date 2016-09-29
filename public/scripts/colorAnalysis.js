@@ -36,6 +36,7 @@ function read(file) {
 
 img.onload = function() {
   var c = document.getElementById("myCanvas");
+  console.log(c);
   c.width = img.width;
   c.height = img.height;
   var ctx = c.getContext("2d");
@@ -117,7 +118,7 @@ function doIt(colorData) {
     colors += computeHex(extract(all[i].id), all[i].nb) + ",";
   }
   colors = colors.substring(0, colors.length - 1);
-  window.location.replace("/load/" + colors);
+  window.location.replace("/en/load/" + colors);
 }
 
 
