@@ -7,6 +7,11 @@ on th ewebsite the projects are ordereb by name at the moment "10k name" arrive 
 - IT WILL BE BETTER TO BE ON THE HOMEPAGE AND FIRST page- to be even more sure we should start the description with a letter "A"
 
 
+## NEW TO do:
+- 1 folder for each language.
+- gzip via node i guess
+- maybe do offline mode like a-apart
+
 ## TO DO:
 - aldo :
   - 2 ou 3 pages interfaces (homepage (upload), visualiation, pie chart?) 
@@ -15,13 +20,10 @@ on th ewebsite the projects are ordereb by name at the moment "10k name" arrive 
   - sort by frequency, sort by color (settings page)
   - choose le nom du projet ✔
   - made with love, link github ✔
-  - I have to better divide the sass (all inside @media is not counted in 10k)
+  - I have to better divide the sass (all inside @media is not counted in 10k) ✔
   - add disclaimer page
   - add about page that explain the project (at the end, produce a simple gif)
 
-## NEW TO do:
-- 1 folder for each language.
-- gzip via node i guess
 
 - max :
   - algo sur node (si pas de js)

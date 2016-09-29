@@ -1,17 +1,24 @@
   ::-moz-selection {
-     color: green;
-     background: yellow;
+     color:  $white;
+     background: $colorTwo; 
  }
  
  ::selection {
-     color: green;
-     background: yellow;
+     color: $white;
+     background: $colorTwo;
  }
- 
+  a {
+         text-decoration: none;
+         color: $colorOne; 
+     }
+       a:hover {
+         text-decoration: none;
+         color:  $colorTwo;
+     } 
  a:link,
  a:visited,
  button {
-     transition: all .25s ease
+     transition: all .25s ease;
  }
  
  body,
@@ -19,10 +26,9 @@
  ul {
      line-height: 1.4;
      list-style: none;
-     padding: 0;
-     li a {
-         text-decoration: none;
-     }
+     padding: 0; 
+     font-size:1em; 
+    color:$nero;
  }
  
  * {
@@ -38,3 +44,33 @@
      flex-direction: column;
      font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
  }
+  nav ul li{ margin: 0;} 
+nav ul li{   
+    a {
+        display:block; 
+        text-align: center;
+    }
+
+    }
+header,footer{  
+ background: $lightgrey;
+} 
+header{
+
+  border-bottom: 1px solid  $grey;
+        box-shadow: 0px 0px 5px $colorOne;
+} 
+ footer{ 
+    border-top: 1px solid  $grey;
+ font-size: 0.8em;
+        box-shadow: 0px 0px 5px $colorOne;
+}
+   footer nav ul li a{
+        font-size: 1em;
+   }
+ /*     
+   flex-flow: row wrap;  
+    display: flex; 
+        flex-flow: column  nowrap;   */
+   
+  

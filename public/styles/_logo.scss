@@ -1,15 +1,40 @@
- .logo{
+ .lo{
+margin:$space;
+a{
+
+ svg {  //logo SVG
+  fill:$white;
+ stroke: $colorTwo;
+  stroke-width:6px;   
+  
   width:50px;
-  height:50px; 
-  overflow: hidden;
-  background: green;
+  padding:1px;
+  display:table;
 }
-.logo svg {  
-  fill:red;
-  stroke: green;
-  stroke-width:2px;  
+ p{ //logo name
+  color:$colorTwo;
+    top:    3px;
+    left:  28 + $space;
+    position: absolute;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: normal;
+    &::first-letter { //first letter 
+text-shadow: 0px 0px 3px $white;
+   //  color:$grey;
 }
-.logo div{
-float:left;
-position: absolute;
+}
+}
+a:hover{ 
+ svg {  //logo SVG
+    stroke: $colorOne;
+}
+ p{ 
+   color:$colorOne;
+    &::first-letter { //first letter
+       color:$colorOne;
+}
+ }
+}
+
 }

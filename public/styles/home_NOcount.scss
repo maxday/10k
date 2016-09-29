@@ -6,14 +6,19 @@
 
 
 /*    Varaibles & Mixins   */ 
-@import 'variables'; 
+@import 'variables';  
 @import 'mixins';
 /*----------*/
 /* more or less TABLET */
 @media (min-width: 30em) { 
-  header,footer{ 
-  flex-flow: row wrap;   
-}
+  header,footer{  align-items: stretch;    
+ // flex-flow: row wrap;   
+} 
+header,footer{ 
+  display: flex; 
+  flex-flow: column wrap; 
+  justify-content: space-between;   
+} 
 header nav  {      
      flex-flow: row nowrap;   
     }
@@ -21,13 +26,32 @@ header nav  {
       display:flex;
            align-items:center;
     }  
-  nav ul{
+  nav ul{ 
      flex-flow: row  nowrap;   
   }
+  // 
+footer nav{ 
+ .on ,a:hover { 
+  border-bottom: 4px solid  $colorOne;
 }
+}
+// 
+header nav{ 
+ .on ,a:hover { 
+  border-top: 4px solid  $colorOne;
+}
+
+}
+
+}
+
+
 /* more or less DESKTOP */ 
 @media (min-width: 60em) {    
   header {  
    align-items: stretch;    
   }  
+
+
+  
 }
