@@ -16,21 +16,7 @@
    
 /* -----------------------*/  
 
-main{  /*
-   @include x-multiple-colored-gradient(
-          'left',
-          #43a1cd 10%,
-          #639b47 20%,
-          #9ac147 30%, 
-          #e1e23b 40%,
-          #f7941e 50%,
-          #ba3e2e 60%,
-          #9a1d34 70%,
-          #662a6c 80%,
-          #272b66 90%,
-               #2d559f 100%
-      ); 
-*/
+main{   
   
    flex:1;   
     display: flex;  
@@ -39,30 +25,64 @@ main{  /*
     align-items: center;
     } 
  
-
+ 
  
 main #cont{ border-radius: $space;
 margin:$space;
-padding:$doubleSpace;
-   background:grey;
+padding:$tripleSpace;
+   background: $lightgrey;
    position:absolute;  
+   box-shadow: 0 0 8px $colorOne;  
+
+label{
+margin-top:$space;
+  color:$colorTwo;
+  font-size: 1.2em;
+}
+   input { 
+     border-radius: $space;
+     border:1px dashed  $colorTwo;
+     padding: $doubleSpace;
+     min-width: 50%;
+     width:100%;
+     &:focus{
+       border:1px solid $colorOne;
+       box-shadow: 0 0 5px $colorOne;  
+     }
+   }
+   button{ border-radius: $space;
+  font-size: 1.2em;
+     margin-top:$tripleSpace;
+      padding: $doubleSpace;
+     min-width: 50%;
+     width:100%;
+     color:$white;
+     border:1px solid $colorOne;
+     background: $colorOne;
+     cursor:pointer;
+     &:hover{
+         background: $colorTwo;
+     }
+   }
 }   
 
  #dropHere{  
  text-align:center;
+ font-size: 1.2em;
       width: auto; 
-    min-height: 137px; 
-    border: 1px dashed  $lightgrey; 
-    border-radius: 10px; 
+ height: 150px;  
+     border:1px dashed  $colorTwo;
+    border-radius: $space; 
     position: relative;
-    color: $lightgrey; 
+    color: $colorTwo; 
     cursor: pointer;
     transition: all .1s ease-in-out;
     overflow:hidden; 
      } 
      #dropHere:hover, #dropHere.onDragOver{
-       color:$white; 
-       background:$lightgrey;
+       color:$colorOne; 
+       background:$white;
+        border:1px solid  $colorOne;
      } 
      #imgsel {  
     opacity: 0;  
