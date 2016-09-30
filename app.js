@@ -13,6 +13,17 @@ var app = express();
 
 
 app.get('/', function (request, response) {
+
+  var Nightmare = require('nightmare');
+
+  var google = new Nightmare()
+    .goto('http://google.com')
+    .wait()
+    .run(function(err, nightmare) {
+      if (err) return console.log(err);
+      console.log('Done!');
+    });
+
   response.render('en/home.ejs' );
 });
 
@@ -24,8 +35,9 @@ app.get('/screenshot/', function (request, response) {
   var filename = "screen_" + (new Date().getTime()) + Math.random() + ".png";
   console.log(filename);
   console.log(request.query.scrSht);
-  screenshot.fromURL(request.query.scrSht, filename, function(){
+  screenshot.fromURL(request.query.scrSht, filename, function(e){
     console.log("screen OK");
+    console.log(e);
     getColors(__dirname + "/" + filename, function(err, colors){
       console.log(err);
       console.log(colors);
