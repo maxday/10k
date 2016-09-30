@@ -22,8 +22,12 @@ app.get('/en/load/:colors', function (request, response) {
 
 app.get('/screenshot/', function (request, response) {
   var filename = "screen_" + (new Date().getTime()) + Math.random() + ".png";
+  console.log(filename);
   screenshot.fromURL(request.param('scrSht'), filename, function(){
+    console.log("screen OK");
     getColors(__dirname + "/" + filename, function(err, colors){
+      console.log(err);
+      console.log(colors);
       var friendlyColor = transformColors(colors);
       response.redirect('/en/load/' + friendlyColor);
     })
