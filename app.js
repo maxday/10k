@@ -15,7 +15,7 @@ var app = express();
 app.get('/', function (request, response) {
 
   var Nightmare = require('nightmare');
-
+  console.log('go nigthmare!');
   var google = new Nightmare()
     .goto('http://google.com')
     .wait()
