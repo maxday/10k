@@ -186,14 +186,17 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       disclaimer: 'fr Disclamer',
       about: 'fr About',
       aboutTitle: "About 10 Kolors Project for 10KApart competition",
-
       disclaimFooter: 'Disclaimer',
       github: 'View this project on',
       menuAbout: 'About',
       menuSettings: 'Settings',
       menuExports: 'Export',
       menuKolorize: 'Kolorize',
-      menuRezult: 'Rezult'
+      menuRezult: 'Rezult',
+
+      titleAbout:'10Kolors - About - no more secrets in your images',
+      titleDisclaimer:'10Kolors - Disclaimer - no more secrets in your images',
+      titleResult: '10Kolors - Results - no more secrets in your images'
     }
   }
   if (getLang(request) === "en") {
@@ -214,22 +217,25 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       disclaimer: 'en Disclamer',
       about: "<h2>10 Kolors a 10KApart project<\/h2> This is a web application to be able to detect the colors from any iamges.",
       aboutTitle: "About 10 Kolors Project for 10KApart competition",
-
       disclaimFooter: 'Disclaimer',
       github: 'View this project on',
       menuAbout: 'About',
       menuSettings: 'Settings',
       menuExports: 'Export',
       menuKolorize: 'Kolorize',
-      menuRezult: 'Rezult'
+      menuRezult: 'Rezult',
+
+      titleAbout:'10Kolors - About - no more secrets in your images', 
+      titleDisclaimer:'10Kolors - Disclaimer - no more secrets in your images',
+      titleResult: '10Kolors - Results - no more secrets in your images'
     }
   }
   if (getLang(request) === "it") {
     toReturn = {
       lang: 'it',
       HomeDescription: 'Grazie a 10 Kolors puoi sapere quali colori compongono un\'immagine online, una pagina web o una tua immagine locale.',
-      title: '10Kolors - no more secrets in your images',
-      baseline: 'Nessun  più colore segreto nelle immagini!',
+      title: '10Kolors - Nessun colore sconosciuto nelle tue immagini',
+      baseline: 'Nessun colore sconosciuto nelle tue immagini!',
       noJs: 'You don\'t have javascript enabled. Please activate it for a full experience :D',
       dropHere: 'Sfoglia un\'immagine o trascinarla qui.',
       colorFromWebsite: 'Ottenere colori di un sito web o un\'immagine online',
@@ -242,14 +248,17 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       disclaimer: 'Disclamer',
       about: "<h2>10 Kolors a 10KApart project<\/h2> This is a web application to be able to detect the colors from any iamges.",
       aboutTitle: "About 10 Kolors Project for 10KApart competition",
-
       disclaimFooter: 'Disclaimer',
       github: 'Guarda questo progetto su',
       menuAbout: 'Riguardo 10K',
       menuSettings: 'Impostazioni',
       menuExports: 'Esporta',
       menuKolorize: 'Kolorizza',
-      menuRezult: 'Rizultato'
+      menuRezult: 'Rizultato',
+
+      titleAbout:'10Kolors - About - Nessun colore sconosciuto nelle tue immagini',
+      titleDisclaimer:'10Kolors - Disclaimer - Nessun colore sconosciuto nelle tue immagini',
+      titleResult: '10Kolors - Risultato - Nessun colore sconosciuto nelle tue immagini'
     }
   }
   toReturn[extraKey0] = extraValue0;
