@@ -181,7 +181,8 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       forText : 'pour',
       exportPalette : 'Exporter palette',
       disclaimer : 'fr Disclamer',
-      about : 'fr About'
+      about : 'fr About',
+       aboutTitle: "About 10 Kolors Project for 10KApart competition"
     }
   }
   if(getLang(request) === "en") {
@@ -197,7 +198,8 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       forText : 'for',
       exportPalette : 'Export palette',
       disclaimer : 'en Disclamer',
-      about : 'en About'
+      about :  "<h2>10 Kolors a 10KApart project<\/h2> This is a web application to be able to detect the colors from any iamges.",
+      aboutTitle: "About 10 Kolors Project for 10KApart competition"
     }
   }
   if(getLang(request) === "it") {
@@ -209,11 +211,13 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       dropHere : 'Browse an image or drag it here.',
       colorFromWebsite : 'Get color from website',
       noSupportForCanvas : 'Your browser does not support the HTML5 canvas tag.',
-      footerText : 'Built with ❤ by ',
+      footerText : 'Creato con ❤ da ',
       forText : 'for',
       exportPalette : 'Export palette',
       disclaimer : 'it Disclamer',
-      about : 'it About'
+      about :  " ",
+       aboutTitle: "About 10 Kolors Project for 10KApart competition"
+
     }
   }
   toReturn[extraKey0] = extraValue0;
@@ -227,8 +231,7 @@ function getLang(request) {
   if (paths.length > 1 && paths[1].length === 2) {
     console.log("RETURN = " + paths[1]);
     return paths[1];
-  }
-  console.log("EN");
+  } 
   return "en";
 }
 
