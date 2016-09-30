@@ -118,8 +118,8 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
 fi
 
 
-pushd "%DEPLOYMENT_TARGET%"
-call .\node_modules\.bin\gulp
+
+gulp
 
 ##################################################################################################################################
 echo "Finished successfully."
