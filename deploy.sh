@@ -119,7 +119,7 @@ fi
 
 
 pwd
-D:/home/site/wwwroot/node_modules/gulp/bin/gulp.js
+/d/home/site/repository/node_modules/gulp/bin/gulp.js
 
 ##################################################################################################################################
 echo "Finished successfully."
