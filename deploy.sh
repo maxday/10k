@@ -118,8 +118,13 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
 fi
 
 
-pwd
-/d/home/site/repository/node_modules/gulp/bin/gulp.js
+# 6. Run Gulp Task
+if [ -e "$DEPLOYMENT_TARGET/gulpfile.js" ]; then
+  cd "$DEPLOYMENT_TARGET"
+  eval ./node_modules/.bin/gulp 
+  exitWithMessageOnError "gulp failed"
+  cd - > /dev/null
+fi
 
 ##################################################################################################################################
 echo "Finished successfully."
