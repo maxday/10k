@@ -2,58 +2,42 @@
 <% include partials/head-res %>
 
   <body>
-    <style> 
-
-
- 
-/**/
- 
-  </style>
-
     <% include partials/header-res %>
-
- 
-
-<div id="export">  
-      <h3>  <%= exportPalette %></h3>
-          <ul>
-            <li><a href='/export/sass/<%= colors %>' id='exportSass'>Scss</a></li>
-            <li><a href='/export/less/<%= colors %>' id='exportLess'>Less</a></li>
+      <div id=export>
+        <h3>
+          <%= exportPalette %>
+        </h3>
+        <ul>
+          <li><a href='/export/sass/<%= colors %>' id='exportSass'>Scss</a></li>
+          <li><a href='/export/less/<%= colors %>' id='exportLess'>Less</a></li>
           <!--  <li><a href='#' id='exportLess'>pdf</a></li>
             <li><a href='#' id='exportLess'>url</a></li>
             <li><a href='#' id='exportLess'>png</a></li>
             <li><a href='#' id='exportLess'>photoshop</a></li> -->
-          </ul>
-          <div id='exportResult'>
-            <% if(typeof exportColor != 'undefined') { %>
-              <% for(var i = 0 ; i < exportColor.length ; i++) { %>
-                <%= exportColor[i]; %>
-                  <br />
+        </ul>
+        <div id='exportResult'>
+          <% if(typeof exportColor != 'undefined') { %>
+            <% for(var i = 0 ; i < exportColor.length ; i++) { %>
+              <%= exportColor[i]; %>
+                <br />
+                <% } %>
                   <% } %>
-                    <% } %> 
+        </div>
       </div>
-</div>
-
-<div id="settings">  
-  <h3>  Settings</h3>
-  <p> </p>
-  </div>
- 
-
-      <main ' style="  background: linear-gradient( to right , <% for(var i = 0 ; i < colors.split(',').length ; i++) { %>
-      <%   percent = 100/colors.split(',').length * i;
-        %>
-     #<%= colors.split(',')[i] %> <%= percent %>% ,
-
-     <% if( i ==   (colors.split(',').length)-1  ) { %>
-    #<%= colors.split(',')[i] %>   100%
-      <%  } %>
-
+      <div id=settings>
+        <h3> Settings</h3>
+        <p> </p>
+      </div>
+      <main  style="background: linear-gradient( to right , <% for(var i = 0 ; i < colors.split(', ').length ; i++) { %>
+      <%   percent = 100/colors.split(', ').length * i; %>
+     #<%= colors.split(', ')[i] %> <%= percent %>% ,
+     <% if( i ==   (colors.split(', ').length)-1  ) { %>
+    #<%= colors.split(', ')[i] %> 100% <%  } %>
      <% } %> );"> 
         <ul id='res' >
-          <% for(var i = 0 ; i < colors.split(',').length ; i++) { %>
-            <li style="background-color:#<%= colors.split(',')[i] %>">
-               #<%= colors.split(',')[i] %>
+          <% for(var i = 0 ; i < colors.split(', ').length ; i++) { %>
+            <li style="background-color:#<%= colors.split(', ')[i] %>">
+               #<%= colors.split(', ')[i] %>
             </li>
             <% } %>
         </ul>
@@ -61,14 +45,14 @@
       <% include partials/footer %>
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->
-        <script src='/scripts/exportAction.js'></script>
-          <script type="text/javascript"> 
+        <script src='/scripts/exportAction.js '></script>
+          <script type='text/javascript'> 
     function toggle_visibility(id) {
        var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
+       if(e.style.display == 'block ')
+          e.style.display = 'none ';
        else
-          e.style.display = 'block'; 
+          e.style.display = 'block '; 
     }
 </script>
         <!--<![endif]-->

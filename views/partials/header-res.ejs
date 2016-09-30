@@ -10,16 +10,16 @@
   </div>
   <nav aria-label='settings Navigation'>
     <ul>
-      <li> <a href='#' onclick="toggle_visibility('settings');" >⚒ settings </a> </li>  
-       <li><a href="#" onclick="toggle_visibility('export');">☇ export </a> 
+      <li> <a href='#' onclick="toggle_visibility('settings');" >⚒ <%= menuSettings %> </a> </li>  
+       <li><a href="#" onclick="toggle_visibility('export');">☇ <%= menuExports %> </a> 
  </li>  
     </ul>
   </nav>
   <nav aria-label='Main Navigation'>
     <ul>
-       <li  ><a href='/'>Kolorize</a></li> 
-      <li><a href='/<%= lang %>/about'>About</a></li>
-      <li class='on'><a href='#'>Rezult</a></li>
+       <li  ><a href='/'><%= menuKolorize %></a></li> 
+      <li><a href='/<%= lang %>/about'><%= menuAbout %></a></li>
+      <li class='on'><a href='#'><%= menuRezult %></a></li>
 
     </ul>
   </nav>

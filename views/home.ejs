@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<% include partials/head-home %>
-  <body >
-
+<% include partials/head-home %> 
+  <body> 
     <% include partials/header-home %>
-
-           <noscript>
+      <noscript>
     <style type='text/css'>
         #dropHere {display:none;}
     </style>
@@ -12,42 +10,40 @@
       <%= noJs %>
     </div>
     </noscript>
-       <main>
-           <canvas id=c>
+      <main>
+        <canvas id=c>
         </canvas>
         <div id=cont>
+          <p class='dsc'><%= HomeDescription  %></p>
           <div id='dropHere'>
-            <div><%= dropHere %></div>
-            <input type='file' onchange="colorAnalysis()" id=imgsel>
-          </div>
-
+            <div>
+              <%= dropHere %>
+            </div>
+            <input type='file' onchange='colorAnalysis()' id=imgsel>
+          </div> 
           <form action='/screenshot' method='GET'>
             <label for='scrSht'><%= colorFromWebsite %></label>
-            <input type='text' name='scrSht' id='scrSht' placeholder='any http:// website' />
-            <button>Kolorise!</button>
+            <input type='text' name='scrSht' id='scrSht' placeholder='<%= placeholdInput %>' />
+            <button><%= btnKolorize %></button>
           </form>
         </div>
-      </main>
-
+      </main> 
       <canvas id='myCanvas' style='display:none;'>
         <%= noSupportForCanvas %>
-      </canvas>
-
+      </canvas> 
       <div id='screenshotResult'>
         <% if(typeof screenshotImg != 'undefined') { %>
-          <img src='/screenshots/<%= screenshotImg %>' width=800 /> aaa
+          <img src='/screenshots/<%= screenshotImg %>' width=800 />
           <% } %>
       </div>
-
-
+ 
       <% include partials/footer %>
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->
-     <script src='/scripts/main.js' async defer='defer'></script>
+        <script src='/scripts/main.js' async defer='defer'></script>
         <script src='/scripts/colorAnalysis.js'></script>
         <script src='/scripts/takeScreenshot.js'></script>
         <!--<![endif]-->
         <!-- endbuild -->
-  </body>
-
+  </body> 
   </html>
