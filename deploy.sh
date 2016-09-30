@@ -117,6 +117,7 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd - > /dev/null
 fi
 
+npm start
 
 ##################################################################################################################################
 echo "Finished successfully."
