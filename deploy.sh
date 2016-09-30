@@ -117,7 +117,8 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd - > /dev/null
 fi
 
-npm start
+eval $NPM_CMD start
+exitWithMessageOnError "npm start failed"
 
 ##################################################################################################################################
 echo "Finished successfully."
