@@ -35,7 +35,7 @@
 
       <div id='screenshotResult'>
         <% if(typeof screenshotImg != 'undefined') { %>
-          <img src='/static/screenshots/<%= screenshotImg %>' width=800 /> aaa
+          <img src='/screenshots/<%= screenshotImg %>' width=800 /> aaa
           <% } %>
       </div>
 
@@ -43,9 +43,9 @@
       <% include ../partials-en/footer %>
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->
-     <script src='static/scripts/main.js' async defer='defer'></script>
-        <script src='static/scripts/colorAnalysis.js'></script>
-        <script src='static/scripts/takeScreenshot.js'></script>
+     <script src='scripts/main.js' async defer='defer'></script>
+        <script src='scripts/colorAnalysis.js'></script>
+        <script src='scripts/takeScreenshot.js'></script>
         <!--<![endif]-->
         <!-- endbuild -->
   </body>

@@ -5,8 +5,9 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('10k:server');
+var debug = require('debug')('nodejs-get-started:server');
 var http = require('http');
+
 
 /**
  * Get port from environment and store in Express.
@@ -14,6 +15,7 @@ var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
 
 /**
  * Create HTTP server.

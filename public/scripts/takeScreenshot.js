@@ -19,7 +19,7 @@ function screenshotCompleted() {
   var screenShotResult = document.getElementById("screenshotResult");
   screenShotResult.innerHTML = "";
   var img = document.createElement("img");
-  img.src = "/static/screenshots/" + JSON.parse(requestObj.response).filename;
+  img.src = "/screenshots/" + JSON.parse(requestObj.response).filename;
   img.width = 800;
   screenShotResult.appendChild(img);
   console.log(img);

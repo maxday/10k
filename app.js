@@ -1,6 +1,7 @@
 var express            = require("express");
 var ejs                = require('ejs');
 var screenshot         = require("node-server-screenshot");
+var path = require('path');
 
 const getColors = require("get-image-colors");
 
@@ -9,7 +10,7 @@ var port = 8080;
 var lang = "en";
 var app = express();
 
-app.use('/static', express.static('public'));
+
 
 app.get('/', function (request, response) {
   response.render('en/home.ejs' );
@@ -126,5 +127,9 @@ function transformColors(colors) {
   console.log(colorsToReturn);
   return colorsToReturn;
 }
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = app;
