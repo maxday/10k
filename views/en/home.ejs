@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<% include ../partials-en/head-home %>
+<%- include(headHome) %>
   <body >
- 
-    <% include ../partials-en/header-home %>
-     
+
+    <%- include(headerHome) %>
+
            <noscript>
     <style type='text/css'>
         #dropHere {display:none;}
     </style>
     <div class='noscriptmsg'>
-      You don't have javascript enabled. Please activate it for a full experience :D
+      <%= noJs %>
     </div>
     </noscript>
        <main>
-           <canvas id=c> 
-        </canvas> 
+           <canvas id=c>
+        </canvas>
         <div id=cont>
           <div id='dropHere'>
-            <span> Browse an image or drag it here.</span>
+            <span><%= dropHere %></span>
             <input type='file' id=imgsel>
           </div>
 
           <form action='/screenshot' method='GET'>
-            <label for='scrSht'>Website Automatic Print-Screen</label>
+            <label for='scrSht'><%= colorFromWebsite %></label>
             <input type='text' name='scrSht' id='scrSht' placeholder='any http:// website' />
             <button> Kolorise  </button>
           </form>
@@ -30,7 +30,7 @@
       </main>
 
       <canvas id='myCanvas' style='display:none;'>
-        Your browser does not support the HTML5 canvas tag.
+        <%= noSupportForCanvas %>
       </canvas>
 
       <div id='screenshotResult'>
@@ -40,12 +40,12 @@
       </div>
 
 
-      <% include ../partials-en/footer %>
+      <%- include(footer) %>
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->
-     <script src='scripts/main.js' async defer='defer'></script>
-        <script src='scripts/colorAnalysis.js'></script>
-        <script src='scripts/takeScreenshot.js'></script>
+     <script src='/scripts/main.js' async defer='defer'></script>
+        <script src='/scripts/colorAnalysis.js'></script>
+        <script src='/scripts/takeScreenshot.js'></script>
         <!--<![endif]-->
         <!-- endbuild -->
   </body>

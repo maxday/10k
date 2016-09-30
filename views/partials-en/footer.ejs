@@ -1,10 +1,25 @@
 <footer>
-  <p class='created-by'>Built with ❤ by <a href='https://twitter.com/aldo_ferrari'>@aldo_ferrari</a> & <a href='https://twitter.com/Xouuox'>@Xouuox</a>. for <a href='https://a-k-apart.com/'>10K apart</a> | <a href='/en/disclaimer'>Disclaimer</a> </p>
+  <p class='created-by'><%= footerText %><a href='https://twitter.com/aldo_ferrari'>@aldo_ferrari</a> & <a href='https://twitter.com/Xouuox'>@Xouuox</a> <%= forText %> <a href='https://a-k-apart.com/'>10K apart</a> | <a href='/en/disclaimer'>Disclaimer</a> </p>
   <nav aria-label='Languages Navigation'>
     <ul>
-      <li class='on'><a href='/'>EN</a></li>
-      <li><a href='/'>FR</a></li>
-      <li><a href='/'>IT</a></li>
+      <% if (lang === 'en') { %>
+        <li class='on'>
+      <% } else { %>
+        <li>
+      <% } %>
+      <a href='/en'>EN</a></li>
+      <% if (lang == 'fr') { %>
+        <li class='on'>
+      <% } else { %>
+        <li>
+      <% } %>
+      <a href='/fr'>FR</a></li>
+      <% if (lang == 'it') { %>
+        <li class='on'>
+      <% } else { %>
+        <li>
+      <% } %>
+      <a href='/it'>IT</a></li>
     </ul>
   </nav>
 </footer>

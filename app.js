@@ -10,13 +10,25 @@ var lang = "en";
 var app = express();
 
 
-
-app.get('/', function (request, response) {
-  response.render('en/home.ejs' );
+app.get('/en', function (request, response) {
+  response.render('en/home.ejs' , getTranslateObject(request));
 });
 
-app.get('/en/load/:colors', function (request, response) {
-  response.render('en/loadColors.ejs', { colors : request.params.colors } );
+app.get('/fr', function (request, response) {
+  response.render('en/home.ejs' , getTranslateObject(request));
+});
+
+app.get('/it', function (request, response) {
+  response.render('en/home.ejs' , getTranslateObject(request));
+});
+
+app.get('/', function (request, response) {
+  response.redirect('/en');
+});
+
+app.get('/:lang/load/:colors', function (request, response) {
+  console.log(getTranslateObject(request, { colors : request.params.colors }));
+  response.render('en/loadColors.ejs', getTranslateObject(request, "colors", request.params.colors) );
 });
 
 app.get('/en/disclaimer', function (request, response) {
@@ -26,6 +38,8 @@ app.get('/en/disclaimer', function (request, response) {
 app.get('/en/about', function (request, response) {
   response.render('en/about.ejs');
 });
+
+
 
 app.get('/screenshot/', function (req, resp) {
 
@@ -39,7 +53,7 @@ app.get('/screenshot/', function (req, resp) {
         console.log(err);
         console.log(colors);
         var friendlyColor = transformColors(colors);
-        resp.redirect('/en/load/' + friendlyColor);
+        resp.redirect('/' + getLang(req) + '/load/' + friendlyColor);
       })
 
     }
@@ -147,5 +161,69 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'public')));
 
+function getTranslateObject(request, extraKey, extraValue) {
+  var toReturn;
+  if(getLang(request) === "fr") {
+    toReturn = {
+      lang : 'fr',
+      headHome: '../partials-en/head-home',
+      headerHome: '../partials-en/header-home',
+      footer : '../partials-en/footer',
+      title : '10Kolors - plus de secrets pour vos images',
+      baseline : 'Plus de Kolors secrètes dans vos images!',
+      noJs : 'JavaScript ne semble pas activé. Merci de l\'activer pour une meilleure expérience :D',
+      dropHere : 'Glissez-déposez une image ici.',
+      colorFromWebsite : 'Retrouver les couleurs d\'un site',
+      noSupportForCanvas : 'Votre navigateur ne supporte pas le tag HTML5 canvas.',
+      footerText : 'Fait avec ❤ par ',
+      forText : 'pour'
+    }
+  }
+  if(getLang(request) === "en") {
+    toReturn = {
+      lang : 'en',
+      headHome: '../partials-en/head-home',
+      headerHome: '../partials-en/header-home',
+      footer : '../partials-en/footer',
+      title : '10Kolors - no more secrets in your images',
+      baseline : 'No more secret Kolors in your images!',
+      noJs : 'You don\'t have javascript enabled. Please activate it for a full experience :D',
+      dropHere : 'Browse an image or drag it here.',
+      colorFromWebsite : 'Get color from website',
+      noSupportForCanvas : 'Your browser does not support the HTML5 canvas tag.',
+      footerText : 'Built with ❤ by ',
+      forText : 'for'
+    }
+  }
+  if(getLang(request) === "it") {
+    toReturn = {
+      lang : 'it',
+      headHome: '../partials-en/head-home',
+      headerHome: '../partials-en/header-home',
+      footer : '../partials-en/footer',
+      title : '10Kolors - no more secrets in your images',
+      baseline : 'No more secret Kolors in your images!',
+      noJs : 'You don\'t have javascript enabled. Please activate it for a full experience :D',
+      dropHere : 'Browse an image or drag it here.',
+      colorFromWebsite : 'Get color from website',
+      noSupportForCanvas : 'Your browser does not support the HTML5 canvas tag.',
+      footerText : 'Built with ❤ by ',
+      forText : 'for'
+    }
+  }
+  toReturn[extraKey] = extraValue;
+  return toReturn;
+}
+
+
+function getLang(request) {
+  var paths = request.url.split("/");
+  if (paths.length > 1 && paths[1].length === 2) {
+    console.log("RETURN = " + paths[1]);
+    return paths[1];
+  }
+  console.log("EN");
+  return "en";
+}
 
 module.exports = app;

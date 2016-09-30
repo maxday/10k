@@ -118,7 +118,8 @@ function doIt(colorData) {
     colors += computeHex(extract(all[i].id), all[i].nb) + ",";
   }
   colors = colors.substring(0, colors.length - 1);
-  window.location.replace("/en/load/" + colors);
+  var lang = window.location.pathname.replace("/","");
+  window.location.replace("/" + lang + "/load/" + colors);
 }
 
 
