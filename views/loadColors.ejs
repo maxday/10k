@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<% include ../partials-en/head-res %>
+<% include partials/head-res %>
 
   <body >
-    <% include ../partials-en/header-res %>
+    <% include partials/header-res %>
       <div class='export'>
-        Export Palette:
+        <%= exportPalette %>
         <ul>
           <li><a href='/export/sass/<%= colors %>' id='exportSass'>Scss</a></li>
           <li><a href='/export/less/<%= colors %>' id='exportLess'>Less</a></li>
@@ -43,7 +43,7 @@
             <% } %>
         </ul>
       </main>
-      <% include ../partials-en/footer %>
+      <% include partials/footer %>
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->
         <script src='/scripts/exportAction.js'></script>

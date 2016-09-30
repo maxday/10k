@@ -10,33 +10,26 @@ var lang = "en";
 var app = express();
 
 
-app.get('/en', function (request, response) {
-  response.render('en/home.ejs' , getTranslateObject(request));
-});
-
-app.get('/fr', function (request, response) {
-  response.render('en/home.ejs' , getTranslateObject(request));
-});
-
-app.get('/it', function (request, response) {
-  response.render('en/home.ejs' , getTranslateObject(request));
-});
-
 app.get('/', function (request, response) {
   response.redirect('/en');
 });
 
+app.get('/:lang', function (request, response) {
+  response.render('home.ejs' , getTranslateObject(request));
+});
+
+
 app.get('/:lang/load/:colors', function (request, response) {
   console.log(getTranslateObject(request, { colors : request.params.colors }));
-  response.render('en/loadColors.ejs', getTranslateObject(request, "colors", request.params.colors) );
+  response.render('loadColors.ejs', getTranslateObject(request, "colors", request.params.colors) );
 });
 
-app.get('/en/disclaimer', function (request, response) {
-  response.render('en/disclaimer.ejs');
+app.get('/:lang/disclaimer', function (request, response) {
+  response.render('disclaimer.ejs', getTranslateObject(request));
 });
 
-app.get('/en/about', function (request, response) {
-  response.render('en/about.ejs');
+app.get('/:lang/about', function (request, response) {
+  response.render('about.ejs', getTranslateObject(request));
 });
 
 
@@ -80,16 +73,20 @@ app.get('/export/:colors', function (request, response) {
 
 app.get('/export/:kind/:colors', function (request, response) {
   if(request.params.kind === "less") {
-    response.render('en/loadColors.ejs', {
-      colors : request.params.colors,
-      exportColor : less(request.params.colors)
-    });
+    response.render('loadColors.ejs',
+      getTranslateObject(
+        request,
+        "colors", request.params.colors,
+        "exportColor", less(request.params.colors))
+      )
   }
   else if(request.params.kind === "sass") {
-    response.render('en/loadColors.ejs', {
-      colors : request.params.colors,
-      exportColor : sass(request.params.colors)
-    });
+    response.render('loadColors.ejs',
+      getTranslateObject(
+        request,
+        "colors", request.params.colors,
+        "exportColor", sass(request.params.colors))
+      )
   }
   else {
     response.status(404).send({ errorMsg: 'kind : ' + request.params.kind + ' is incorrect' });
@@ -161,14 +158,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'public')));
 
-function getTranslateObject(request, extraKey, extraValue) {
+function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraValue1) {
   var toReturn;
   if(getLang(request) === "fr") {
     toReturn = {
       lang : 'fr',
-      headHome: '../partials-en/head-home',
-      headerHome: '../partials-en/header-home',
-      footer : '../partials-en/footer',
       title : '10Kolors - plus de secrets pour vos images',
       baseline : 'Plus de Kolors secrètes dans vos images!',
       noJs : 'JavaScript ne semble pas activé. Merci de l\'activer pour une meilleure expérience :D',
@@ -176,15 +170,13 @@ function getTranslateObject(request, extraKey, extraValue) {
       colorFromWebsite : 'Retrouver les couleurs d\'un site',
       noSupportForCanvas : 'Votre navigateur ne supporte pas le tag HTML5 canvas.',
       footerText : 'Fait avec ❤ par ',
-      forText : 'pour'
+      forText : 'pour',
+      exportPalette : 'Exporter palette'
     }
   }
   if(getLang(request) === "en") {
     toReturn = {
       lang : 'en',
-      headHome: '../partials-en/head-home',
-      headerHome: '../partials-en/header-home',
-      footer : '../partials-en/footer',
       title : '10Kolors - no more secrets in your images',
       baseline : 'No more secret Kolors in your images!',
       noJs : 'You don\'t have javascript enabled. Please activate it for a full experience :D',
@@ -192,15 +184,13 @@ function getTranslateObject(request, extraKey, extraValue) {
       colorFromWebsite : 'Get color from website',
       noSupportForCanvas : 'Your browser does not support the HTML5 canvas tag.',
       footerText : 'Built with ❤ by ',
-      forText : 'for'
+      forText : 'for',
+      exportPalette : 'Export palette'
     }
   }
   if(getLang(request) === "it") {
     toReturn = {
       lang : 'it',
-      headHome: '../partials-en/head-home',
-      headerHome: '../partials-en/header-home',
-      footer : '../partials-en/footer',
       title : '10Kolors - no more secrets in your images',
       baseline : 'No more secret Kolors in your images!',
       noJs : 'You don\'t have javascript enabled. Please activate it for a full experience :D',
@@ -208,10 +198,12 @@ function getTranslateObject(request, extraKey, extraValue) {
       colorFromWebsite : 'Get color from website',
       noSupportForCanvas : 'Your browser does not support the HTML5 canvas tag.',
       footerText : 'Built with ❤ by ',
-      forText : 'for'
+      forText : 'for',
+      exportPalette : 'Export palette'
     }
   }
-  toReturn[extraKey] = extraValue;
+  toReturn[extraKey0] = extraValue0;
+  toReturn[extraKey1] = extraValue1;
   return toReturn;
 }
 
