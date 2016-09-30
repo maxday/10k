@@ -118,12 +118,8 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
 fi
 
 
-IF EXIST "Gulpfile.js" (
- pushd "%DEPLOYMENT_TARGET%"
- call .\node_modules\.bin\gulp 
- IF !ERRORLEVEL! NEQ 0 goto error
- popd
+pushd "%DEPLOYMENT_TARGET%"
+call .\node_modules\.bin\gulp
 
- )
 ##################################################################################################################################
 echo "Finished successfully."
