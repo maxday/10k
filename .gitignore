@@ -1,5 +1,5 @@
-.idea 
-.vscode 
+.idea
+.vscode
 dist
 .tmp
 bower_components
@@ -8,4 +8,5 @@ test/bower_components
 node_modules
 public/screenshots
 npm-debug.log
-server.log 
+server.log
+screen_*.png

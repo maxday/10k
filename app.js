@@ -22,8 +22,13 @@ app.get('/en/load/:colors', function (request, response) {
 
 app.get('/screenshot/', function (request, response) {
   var filename = "screen_" + (new Date().getTime()) + Math.random() + ".png";
-  screenshot.fromURL(request.param('scrSht'), "public/screenshots/" + filename, function(){
-    getColors(__dirname + "/public/screenshots/" + filename, function(err, colors){
+  console.log(filename);
+  console.log(request.query.scrSht);
+  screenshot.fromURL(request.query.scrSht, filename, function(){
+    console.log("screen OK");
+    getColors(__dirname + "/" + filename, function(err, colors){
+      console.log(err);
+      console.log(colors);
       var friendlyColor = transformColors(colors);
       response.redirect('/en/load/' + friendlyColor);
     })
@@ -131,5 +136,6 @@ function transformColors(colors) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 module.exports = app;
