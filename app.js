@@ -23,6 +23,10 @@ app.get('/en/disclaimer', function (request, response) {
   response.render('en/disclaimer.ejs');
 });
 
+app.get('/en/about', function (request, response) {
+  response.render('en/about.ejs');
+});
+
 app.get('/screenshot/', function (req, resp) {
 
   var request = require('request');
