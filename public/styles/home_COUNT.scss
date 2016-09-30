@@ -1,105 +1,116 @@
 /*----------------------------------*/
 /*  LEGGERO      LIGHT       LEGER  */
 /* ------- COUNT IN THE 10K --------*/
-/*----------------------------------*/ 
+/*----------------------------------*/
 
 
- /* responsive for MOBILE PHONE */ 
- /* MOBILE FIRST APPROACH  */
+/* responsive for MOBILE PHONE */
+/* MOBILE FIRST APPROACH  */
 /*-------------------------*/
+
 /*    Varaibles & Mixins   */
 
 @import 'variables';
-@import 'mixins';   
+@import 'mixins';
 @import 'common';
-@import 'logo'; 
-   
-/* -----------------------*/  
+@import 'logo';
 
-main{   
-  
-   flex:1;   
-    display: flex;  
-    flex-flow: row wrap;  
-    justify-content: center;  
-    align-items: center;
-    } 
- 
- 
- 
-main #cont{ border-radius: $space;
-margin:$space;
-padding:$tripleSpace;
-   background: $lightgrey;
-   position:absolute;  
-   box-shadow: 0 0 8px $colorOne;  
+/* -----------------------*/
 
-label{
-margin-top:$space;
-  color:$colorTwo;
-  font-size: 1.2em;
+main { 
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
-   input { 
-     border-radius: $space;
-     border:1px dashed  $colorTwo;
-     padding: $doubleSpace;
-     min-width: 50%;
-     width:100%;
-     &:focus{
-       border:1px solid $colorOne;
-       box-shadow: 0 0 5px $colorOne;  
-     }
-   }
-   button{ border-radius: $space;
-  font-size: 1.2em;
-     margin-top:$tripleSpace;
-      padding: $doubleSpace;
-     min-width: 50%;
-     width:100%;
-     color:$white;
-     border:1px solid $colorOne;
-     background: $colorOne;
-     cursor:pointer;
-     &:hover{
-         background: $colorTwo;
-     }
-   }
-}   
-
- #dropHere{  
- text-align:center;
- font-size: 1.2em;
-      width: auto; 
- height: 150px;  
-     border:1px dashed  $colorTwo;
-    border-radius: $space; 
-    position: relative;
-    color: $colorTwo; 
-    cursor: pointer;
-    transition: all .1s ease-in-out;
-    overflow:hidden; 
-     } 
-     #dropHere:hover, #dropHere.onDragOver{
-       color:$colorOne; 
-       background:$white;
-        border:1px solid  $colorOne;
-     } 
-     #imgsel {  
-    opacity: 0;  
-    cursor: pointer; 
-    height: 100%; 
+.noscriptmsg{
+    text-align: center;
+    border: 1px solid  $colorwarning;
+    background: $white;
+    color: $colorwarning;
+    border-radius:  $space;
+    margin: $space;
+    font-size: 0.8em;
+    padding: $space; 
+}
+main #cont {
+  border-radius: $space;
+  margin: $space;
+  padding: $tripleSpace;
+  background: $lightgrey;
+  position: absolute;
+  box-shadow: 0 0 8px $colorOne;
+  label {
+    margin-top: $space;
+    color: $colorTwo;
+    font-size: 1.2em;
+  }
+  input {
+    border-radius: $space;
+    border: 1px dashed $colorTwo;
+    padding: $doubleSpace;
+    min-width: 50%;
     width: 100%;
+    &:focus {
+      border: 1px solid $colorOne;
+      box-shadow: 0 0 5px $colorOne;
+    }
+  }
+  button {
+    border-radius: $space;
+    font-size: 1.2em;
+    margin-top: $tripleSpace;
+    padding: $doubleSpace;
+    min-width: 50%;
+    width: 100%;
+    color: $white;
+    border: 1px solid $colorOne;
+    background: $colorOne;
+    cursor: pointer;
+    &:hover {
+      background: $colorTwo;
+    }
+  }
 }
- 
 
- form{
-    label{
-      width:100%;
-      display:inline-block; 
-      text-align:center; 
-    }
-    button,input{
-      margin: 0px auto; 
+#dropHere {
+  text-align: center;
+  font-size: 1.2em;
+  width: auto;
+  height: 150px;
+  border: 1px dashed $colorTwo;
+  border-radius: $space;
+  position: relative;
+  color: $colorTwo;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+  overflow: hidden;
+}
+
+#dropHere:hover,
+#dropHere.onDragOver {
+  color: $colorOne;
+  background: $white;
+  border: 1px solid $colorOne;
+}
+
+#imgsel {
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+form {
+  label {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+  button,
+  input {
+    margin: 0px auto;
     display: table;
-    }
- }
+  }
+}

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <% include ../partials-en/head-home %>
   <body >
-    <noscript>
-    <style type="text/css">
+ 
+    <% include ../partials-en/header-home %>
+     
+           <noscript>
+    <style type='text/css'>
         #dropHere {display:none;}
     </style>
-    <div class="noscriptmsg">
+    <div class='noscriptmsg'>
       You don't have javascript enabled. Please activate it for a full experience :D
     </div>
     </noscript>
-    <% include ../partials-en/header-home %>
-      <main>
-        <canvas id=c>
-          
-        </canvas>
-
+       <main>
+           <canvas id=c> 
+        </canvas> 
         <div id=cont>
           <div id='dropHere'>
             <span> Browse an image or drag it here.</span>
@@ -29,7 +29,7 @@
         </div>
       </main>
 
-      <canvas id="myCanvas" style="display:none;">
+      <canvas id='myCanvas' style='display:none;'>
         Your browser does not support the HTML5 canvas tag.
       </canvas>
 
