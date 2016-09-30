@@ -17,14 +17,23 @@
 
 /* -----------------------*/
 
-main {
+main { 
   flex: 1;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
-
+.noscriptmsg{
+    text-align: center;
+    border: 1px solid  $colorwarning;
+    background: $white;
+    color: $colorwarning;
+    border-radius:  $space;
+    margin: $space;
+    font-size: 0.8em;
+    padding: $space; 
+}
 main #cont {
   border-radius: $space;
   margin: $space;
