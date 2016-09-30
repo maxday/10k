@@ -2,6 +2,7 @@ var express            = require("express");
 var ejs                = require('ejs');
 var screenshot         = require("node-server-screenshot");
 var path = require('path');
+var http = require('http');
 
 const getColors = require("get-image-colors");
 
@@ -13,17 +14,6 @@ var app = express();
 
 
 app.get('/', function (request, response) {
-
-  var Nightmare = require('nightmare');
-  console.log('go nigthmare!');
-  var google = new Nightmare()
-    .goto('http://google.com')
-    .wait()
-    .run(function(err, nightmare) {
-      if (err) return console.log(err);
-      console.log('Done!');
-    });
-
   response.render('en/home.ejs' );
 });
 
@@ -31,20 +21,22 @@ app.get('/en/load/:colors', function (request, response) {
   response.render('en/loadColors.ejs', { colors : request.params.colors } );
 });
 
-app.get('/screenshot/', function (request, response) {
-  var filename = "screen_" + (new Date().getTime()) + Math.random() + ".png";
-  console.log(filename);
-  console.log(request.query.scrSht);
-  screenshot.fromURL(request.query.scrSht, filename, function(e){
-    console.log("screen OK");
-    console.log(e);
-    getColors(__dirname + "/" + filename, function(err, colors){
-      console.log(err);
-      console.log(colors);
-      var friendlyColor = transformColors(colors);
-      response.redirect('/en/load/' + friendlyColor);
-    })
+app.get('/screenshot/', function (req, resp) {
 
+  var request = require('request');
+  console.log("https://tenkolorsscrenshot.herokuapp.com/screenshot?scrSht=" + req.query.scrSht);
+  request('https://tenkolorsscrenshot.herokuapp.com/screenshot?scrSht=' + req.query.scrSht, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      var url = "https://tenkolorsscrenshot.herokuapp.com/" + JSON.parse(body).success.replace("./", "");
+      console.log("file url = " + url);
+      getColors(url, function(err, colors){
+        console.log(err);
+        console.log(colors);
+        var friendlyColor = transformColors(colors);
+        resp.redirect('/en/load/' + friendlyColor);
+      })
+
+    }
   });
 
 })
