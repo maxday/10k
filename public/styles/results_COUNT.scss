@@ -32,16 +32,24 @@
     }
 main{  
    display: flex;  
-        flex-flow: column ;   
+    flex-flow: column ;   
    flex:1;  
 } 
-  main  ul  {     
+  main #res  {   
+       //RESULTS  
  display: flex;
  flex-flow: column;
-    flex:1; 
-    align-items: flex-start;  
- justify-content: space-between;
- li{    margin:3px; color:white; }
+   flex:1; 
+    align-items: center;  
+ justify-content: space-around;
+
+ li{  
+   //each circle
+     margin:3px; 
+ font-size:0.8em;
+ color:$white; 
+ text-align: center; 
+ }
   } 
    /**/
     nav ul li  a:focus { 
@@ -51,23 +59,32 @@ main{
      border:none;
   }
   
+/*---*/
+  #export,#settings{
+display:none;
+background: $lightergrey;
+  border-bottom: 1px solid $colorOne;
+  padding:$space;
+      
+  }
+
 
 /*------------*/
   
-.colors{ 
-	>li{ 
+main #res   li{  
 		height: 58px; 	
 		width: 58px; 
-		border-radius: 50%;
-		border-bottom: 5px solid rgba(0, 0, 0, .1);   
+    padding-top:15px;
+		border-radius: 50%; 
+		border-bottom: 5px solid rgba(0, 0, 0, .1);    
 		cursor: pointer;
 		transition-duration: .2s;
-		box-shadow: 0 2px 1px rgba(0, 0, 0, .2); 
+		box-shadow: 1px 2px 1px rgba(0, 0, 0, .2); 
 		&:hover{
 			-webkit-transform: scale(1.2);
 			transform: scale(1.2);
 			border-bottom: 10px solid rgba(0, 0, 0, .15);
 			box-shadow: 0 10px 10px rgba(0, 0, 0, .2); 
 		}  
-	}
+ 
 }
