@@ -18,18 +18,7 @@
 /* -----------------------*/
 
 
-  nav ul li a { 
-    text-align: center; 
-    padding: 0 $space;
-    border-top:1px solid $white;
-    background: $lightergrey; 
-  }
-    nav ul li.on a { 
-      cursor:default;
-    color: $colorTwo;
-     background: $grey; 
-  }
-  
+
 
 main { 
   flex: 1;

@@ -1,93 +1,116 @@
-  ::-moz-selection {
-     color:  $white;
-     background: $colorOne; 
- }
- 
- ::selection {
-     color: $white;
-     background: $colorOne;
- }
- /* do not group these rules */
-*::-webkit-input-placeholder {
-    color: $colorOne;
-}
-*:-moz-placeholder {
-    /* FF 4-18 */
-    color: $colorOne;
-}
-*::-moz-placeholder {
-    /* FF 19+ */
-    color: $colorOne;
-}
-*:-ms-input-placeholder {
-    /* IE 10+ */
-    color: $colorOne;
-}
-  a {
-         text-decoration: none;
-         color: $colorOne; 
-     }
-       a:hover {
-         text-decoration: none;
-         color:  $colorTwo;
-     } 
- a:link,
- a:visited,
- button {
-     transition: all .25s ease;
- }
- 
- body,
- ol,
- ul {
-     line-height: 1.4;
-     list-style: none;
-     padding: 0; 
-     font-size:1em;  
- }
- 
- * {
-     margin-top: 0;
-     margin-bottom: 0;
-     box-sizing: border-box
- }
- 
- body {
-     margin: 0;
-     display: flex;
-     min-height: 100vh;
-     flex-direction: column;
-     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-     color:$nero;
- }
- input:focus,
-select:focus,
-textarea:focus,
-button:focus { 
-    outline: none;
-}
-nav ul li{   margin:0px;
-    a {
-        display:block; 
-        text-align: center;
-    }
-
-    }
-header,footer{  
-    padding:0;  
- background: $lightgrey;
-} 
-header{ 
-  border-bottom: 1px solid  $grey;
-        box-shadow: 0px 0px 5px $colorOne;
-} 
- footer{ 
-    border-top: 1px solid  $grey;
- font-size: 0.8em;
-        box-shadow: 0px 0px 5px $colorOne;
-}
-   footer nav ul li a{
-        font-size: 1em;
-   } 
-   
+   ::-moz-selection {
+      color: $white;
+      background: $colorOne;
+  }
   
+   ::selection {
+      color: $white;
+      background: $colorOne;
+  }
+  /* do not group these rules */
+  
+  *::-webkit-input-placeholder {
+      color: $colorOne;
+  }
+  
+  *:-moz-placeholder {
+      /* FF 4-18 */
+      color: $colorOne;
+  }
+  
+  *::-moz-placeholder {
+      /* FF 19+ */
+      color: $colorOne;
+  }
+  
+  *:-ms-input-placeholder {
+      /* IE 10+ */
+      color: $colorOne;
+  }
+  
+  a {
+      text-decoration: none;
+      color: $colorOne;
+  }
+  
+  a:hover {
+      text-decoration: none;
+      color: $colorTwo;
+  }
+  
+  a:link,
+  a:visited,
+  button {
+      transition: all .25s ease;
+  }
+  
+  body,
+  ol,
+  ul {
+      line-height: 1.4;
+      list-style: none;
+      padding: 0;
+      font-size: 1em;
+  }
+  
+  * {
+      margin-top: 0;
+      margin-bottom: 0;
+      box-sizing: border-box
+  }
+  
+  body {
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+      color: $nero;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+  
+  nav ul li {
+      margin: 0px;
+      a {
+          display: block;
+          text-align: center;
+      }
+  }
+    nav ul li a { 
+    text-align: center; 
+    padding: 0 $space; 
+    background: $lightergrey; 
+  }
+    nav ul li.on a { 
+      cursor:default;
+    color: $colorTwo;
+     background: $grey; 
+  }
+  
+
+  header,
+  footer {
+      padding: 0;
+      background: $lightgrey;
+  }
+  
+  header {
+      border-bottom: 1px solid $grey;
+      box-shadow: 0px 0px 5px $colorOne;
+  }
+  
+  footer {
+      border-top: 1px solid $grey;
+      font-size: 0.8em;
+      box-shadow: 0px 0px 5px $colorOne;
+  }
+  
+  footer nav ul li a {
+      font-size: 1em;
+  }

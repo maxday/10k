@@ -2,8 +2,22 @@
 <% include partials/head-res %>
 
   <body>
+    <style> 
+
+  #export,#settings{
+display:none;
+  }
+
+ 
+/**/
+ 
+  </style>
+
     <% include partials/header-res %>
-      <div class='export'>
+
+ 
+
+<div id="export">  
         <%= exportPalette %>
           <ul>
             <li><a href='/export/sass/<%= colors %>' id='exportSass'>Scss</a></li>
@@ -19,12 +33,16 @@
                 <%= exportColor[i]; %>
                   <br />
                   <% } %>
-                    <% } %>
-          </div>
+                    <% } %> 
       </div>
-      <main>
+</div>
 
+<div id="settings">  
+  Settings
+  </div>
+ 
 
+      <main> 
         <ul id='res' class='colors' style="  background: linear-gradient( to right , <% for(var i = 0 ; i < colors.split(',').length ; i++) { %>
       <%   percent = 100/colors.split(',').length * i;
         %>
@@ -47,8 +65,18 @@
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->
         <script src='/scripts/exportAction.js'></script>
+          <script type="text/javascript"> 
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block'; 
+    }
+</script>
         <!--<![endif]-->
         <!-- endbuild -->
   </body>
+ 
 
   </html>

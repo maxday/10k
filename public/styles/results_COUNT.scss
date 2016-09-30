@@ -17,6 +17,7 @@
 /* -----------------------*/
  
  
+  
     main #res{
      
     /*   @include x-multiple-colored-gradient(
@@ -42,12 +43,17 @@ main{
  justify-content: space-between;
  li{    margin:3px; color:white; }
   } 
+   /**/
+    nav ul li  a:focus { 
+      cursor:default; 
+     color:$colorTwo;
+     background: $grey;
+     border:none;
+  }
   
 
 /*------------*/
- 
- 
-
+  
 .colors{ 
 	>li{ 
 		height: 58px; 	
@@ -56,15 +62,12 @@ main{
 		border-bottom: 5px solid rgba(0, 0, 0, .1);   
 		cursor: pointer;
 		transition-duration: .2s;
-		box-shadow: 0 2px 1px rgba(0, 0, 0, .2);
-			
+		box-shadow: 0 2px 1px rgba(0, 0, 0, .2); 
 		&:hover{
 			-webkit-transform: scale(1.2);
 			transform: scale(1.2);
 			border-bottom: 10px solid rgba(0, 0, 0, .15);
 			box-shadow: 0 10px 10px rgba(0, 0, 0, .2); 
-		} 
-		 
-	 
+		}  
 	}
 }
