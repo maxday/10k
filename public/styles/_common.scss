@@ -27,8 +27,7 @@
      line-height: 1.4;
      list-style: none;
      padding: 0; 
-     font-size:1em; 
-    color:$nero;
+     font-size:1em;  
  }
  
  * {
@@ -43,9 +42,15 @@
      min-height: 100vh;
      flex-direction: column;
      font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+     color:$nero;
  }
-  nav ul li{ margin: 0;} 
-nav ul li{   
+ input:focus,
+select:focus,
+textarea:focus,
+button:focus { 
+    outline: none;
+}
+nav ul li{   margin:0px;
     a {
         display:block; 
         text-align: center;
@@ -53,10 +58,10 @@ nav ul li{
 
     }
 header,footer{  
+    padding:0;  
  background: $lightgrey;
 } 
-header{
-
+header{ 
   border-bottom: 1px solid  $grey;
         box-shadow: 0px 0px 5px $colorOne;
 } 
@@ -67,10 +72,6 @@ header{
 }
    footer nav ul li a{
         font-size: 1em;
-   }
- /*     
-   flex-flow: row wrap;  
-    display: flex; 
-        flex-flow: column  nowrap;   */
+   } 
    
   

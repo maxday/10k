@@ -1,64 +1,85 @@
 @charset "UTF-8";
+
 /*----------------------------------------*/
+
+
 /*  PUT THE MOST OF CSS INSIDE  ----------*/
+
+
 /* ------- DO NOT COUNT IN THE 10K -------*/
-/*----------------------------------------*/ 
 
 
-/*    Varaibles & Mixins   */ 
-@import 'variables';  
-@import 'mixins';
+/*----------------------------------------*/
+
+
+/*    Varaibles & Mixins   */
+
+@import 'variables';
+@import 'mixins'; 
 /*----------*/
+
+
 /* more or less TABLET */
+
 @media (min-width: 30em) { 
-    nav ul{ 
-     flex-flow: row  nowrap;   
+  header,
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
-  header,footer{ 
- /* display: flex; 
-  flex-flow: column wrap; 
-  justify-content: space-between;   */
-} 
-  header,footer{  //align-items: stretch;   
-  display:flex; 
-   flex-flow: row nowrap;   
-} 
-
-header nav  {      
-     flex-flow: row nowrap;   
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
+  nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  nav ul li {
+    height: 100%;
+    display: table;
+    margin: 0 1px 0 0;
+  }
+  nav ul li a {
+    height: 100%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 $space;
+    background: $lightergrey;
+    border-bottom: 2px solid transparent;
+  }
+  nav ul li.on a {
+    
+      cursor:default;
+    color: $colorTwo;
+  }
+  header nav {
+    .on a {
+      border-bottom: 2px solid $colorTwo;
     }
-    header nav  ul li    {
-      display:flex;
-           align-items:center;
-    }   
-
-  // 
-footer nav{ 
- .on ,a:hover { 
-  border-bottom: 4px solid  $colorOne;
-}
-}
-// 
-header nav{ 
- .on ,a:hover { 
-  border-top: 4px solid  $colorOne;
-}
-
-}
-footer{
- // background: red;
-}
+    a:hover {
+      border-bottom: 2px solid $colorTwo;
+    }
+  }
+  footer {
+    nav ul li a {
+      border-top: 2px solid transparent;
+    }
+    .on a {
+      border-top: 2px solid $colorTwo;
+    }
+    a:hover {
+      border-top: 2px solid $colorTwo;
+    }
+  }
 }
 
 
-/* more or less DESKTOP */ 
-@media (min-width: 60em) {    
-  header {  
-   align-items: stretch;    
-  }  
-footer{
- // background:green;
-}
+/* more or less DESKTOP */
 
-  
+@media (min-width: 60em) {
+ 
 }
