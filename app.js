@@ -171,7 +171,9 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       noSupportForCanvas : 'Votre navigateur ne supporte pas le tag HTML5 canvas.',
       footerText : 'Fait avec ❤ par ',
       forText : 'pour',
-      exportPalette : 'Exporter palette'
+      exportPalette : 'Exporter palette',
+      disclaimer : 'fr Disclamer',
+      about : 'fr About'
     }
   }
   if(getLang(request) === "en") {
@@ -185,7 +187,9 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       noSupportForCanvas : 'Your browser does not support the HTML5 canvas tag.',
       footerText : 'Built with ❤ by ',
       forText : 'for',
-      exportPalette : 'Export palette'
+      exportPalette : 'Export palette',
+      disclaimer : 'en Disclamer',
+      about : 'en About'
     }
   }
   if(getLang(request) === "it") {
@@ -199,7 +203,9 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       noSupportForCanvas : 'Your browser does not support the HTML5 canvas tag.',
       footerText : 'Built with ❤ by ',
       forText : 'for',
-      exportPalette : 'Export palette'
+      exportPalette : 'Export palette',
+      disclaimer : 'it Disclamer',
+      about : 'it About'
     }
   }
   toReturn[extraKey0] = extraValue0;
