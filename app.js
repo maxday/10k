@@ -3,6 +3,9 @@ var ejs                = require('ejs');
 var screenshot         = require("node-server-screenshot");
 var path = require('path');
 var http = require('http');
+var guid = require('guid');
+var fs = require('fs');
+var childProcess = require('child_process');
 
 const getColors = require("get-image-colors");
 
@@ -21,7 +24,7 @@ app.get('/en/load/:colors', function (request, response) {
   response.render('en/loadColors.ejs', { colors : request.params.colors } );
 });
 
-app.get('/screenshot/', function (req, resp) {
+app.get('/screenshot_old/', function (req, resp) {
 
   var request = require('request');
   console.log("https://tenkolorsscrenshot.herokuapp.com/screenshot?scrSht=" + req.query.scrSht);
@@ -75,6 +78,43 @@ app.get('/export/:kind/:colors', function (request, response) {
     response.status(404).send({ errorMsg: 'kind : ' + request.params.kind + ' is incorrect' });
   }
 });
+
+
+app.get('/screenshot/', function (request, response) {
+
+  var filename = guid.raw() + '.png';
+  var filenameFull = './public/' + filename;
+  var childArgs = [
+    'rasterize.js',
+    request.query.scrSht,
+    filenameFull,
+    '',
+    1
+  ];
+
+  //grap the screen
+  childProcess.execFile('bin/phantomjs', childArgs, function(error, stdout, stderr){
+    console.log("Grabbing screen for: " + request.query.scrSht);
+    if(error !== null) {
+      console.log("Error capturing page: " + error.message + "\n for address: " + childArgs[1]);
+      return response.json(500, { 'error': 'Problem capturing page.' });
+    } else {
+      //load the saved file
+      fs.readFile(filenameFull, function(err, temp_png_data){
+        var f = filenameFull.replace("./public", __dirname + "/public");
+        getColors(f, function(err, colors){
+          console.log(err);
+          console.log(colors);
+          var friendlyColor = transformColors(colors);
+          response.redirect('/en/load/' + friendlyColor);
+        })
+      });
+    }
+  });
+
+})
+
+
 
 app.locals.createDivColor  = function(colorName) {
   var iDiv = window.document.createElement('div');
