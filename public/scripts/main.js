@@ -3,20 +3,20 @@
 function resize() {
 
   //initial
-  w = c.width = window.innerWidth - 10,
+  w = c.width = window.innerWidth  ,
     h = c.height = window.innerHeight - 99,
     ctx = c.getContext('2d'),
 
     //parameters
     total = (w / 8) | 0,
-    accelleration = .05,
-    lineAlpha = .02,
-    range = 25,
+    accelleration = .03,
+    lineAlpha = .05,
+    range = 30,
 
     //afterinitial calculations
     size = w / total,
     occupation = w / total,
-    repaintColor = 'rgba(255, 255, 255, .019 )'
+    repaintColor = 'rgba(255, 255, 255, .02 )'
   colors = [],
     dots = [],
     dotsVel = [];

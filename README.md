@@ -1,36 +1,32 @@
-# 10k
-Inspiring the Web with Just 10k.
-[a-k-apart.com](https://a-k-apart.com/)
+# 10 Kolors a 10KApart project
+This is a web application to be able to detect the color from any iamges.
+- from a local iamge (browsing it or with drag & drop)
+- from an online image hosted somewhere
+- typing directly a website; our software will take care of creating aprint-screen for you
+An you will have all the main colors detected.
 
-# To launch the app :
+You can save the url and see your palette of color whenever you want.
+You can export the palette colors in HEX, sass, less.
+We are not storing ANY printscreen or images.
+
+
+The project it is multilangul and.....All stay under 10KiloByte to partecipate to the competition 
+[10Kolors](https://a-k-apart.com/).
+
+# evelutions
+In the future we would love to implement:
+- export in more formats; rgb, photoshop, png ...
+- 
+
+
+## To launch the app :
 - npm install
 - npm start
 - go to :   http://localhost:8080
 
+# Authors:
+Aldo Ferrari & Maxime David
 
-## Nice articles / resource / inspirations
-- http://tobyho.com/2010/03/11/how-much-of-the-web-actually/ (quite old but really interesting)
-- http://www.awwwards.com/ (inspiration for nice design even if not under 10k)
-
-## Deadline
-September 30th 2016
-  
-## Questions:
-1. can we use canvas with JS?  (I guess no)
-2. js it is counted in the 10k, if loaded from external?
-3. external font like google fond loaded via cdn count in the 10k?  
-
-### Answers online:
-asnwers from microsoft: [http://blogs.windows.com/msedgedev/2016/08/15/10k-apart/](http://blogs.windows.com/msedgedev/2016/08/15/10k-apart/)
-
-[http://aneventapart.com/news/post/the-10k-apart-challenge](http://aneventapart.com/news/post/the-10k-apart-challenge)
-- allows external JavaScript libraries to skip the limit
-- Contestants can use jQuery, Prototype or Typekit libraries without it counting to their overall file size.
-- You can similarly use TypeKit to make your fonts extra-sweet
-
--> a lot of answers here : https://a-k-apart.com/faq favicon does not count, neither images if loaded async
-
-
-#TNX TO: (aknowlegment and inspiration used)
+### TNX TO: (aknowlegment and inspirations)
 - http://codepen.io/towc/pen/ByVJre
 - http://codepen.io/Lewitje/pen/doJRBX

@@ -1,27 +1,32 @@
  .lo{
 margin:$space;
+em{
+      font-size: 0.9em;
+    }
 a{
 
  svg {  //logo SVG
   fill:$white;
  stroke: $colorTwo;
-  stroke-width:6px;   
-  
+  stroke-width:6px;    
   width:50px;
   padding:1px;
   display:table;
 }
+    
  p{ //logo name
+ font-family: "Verdana";
   color:$colorTwo;
-    top:    3px;
-    left:  28 + $space;
+    top:    4px;
+    left:  26 + $space;
     position: absolute;
     font-size: 40px; 
     line-height: 40px;
     font-weight: normal;
+
     &::first-letter { //first letter 
 text-shadow: 0px 0px 3px $white;
-   //  color:$grey;
+ 
 }
 }
 }

@@ -51,10 +51,10 @@
     background: $lightergrey;
     border-bottom: 2px solid transparent;
   }
-  nav ul li.on a {
-    
+  nav ul li.on a { 
       cursor:default;
     color: $colorTwo;
+      background: $lightergrey; 
   }
   header nav {
     .on a {
@@ -75,11 +75,18 @@
       border-top: 2px solid $colorTwo;
     }
   }
+
+   main #cont {
+    width:80%;
+}
 }
 
 
 /* more or less DESKTOP */
 
 @media (min-width: 60em) {
- 
+ main #cont {
+    width:50%;
+}
+
 }

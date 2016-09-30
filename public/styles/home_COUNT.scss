@@ -17,6 +17,20 @@
 
 /* -----------------------*/
 
+
+  nav ul li a { 
+    text-align: center; 
+    padding: 0 $space;
+    border-top:1px solid $white;
+    background: $lightergrey; 
+  }
+    nav ul li.on a { 
+      cursor:default;
+    color: $colorTwo;
+     background: $grey; 
+  }
+  
+
 main { 
   flex: 1;
   display: flex;
@@ -35,26 +49,37 @@ main {
     padding: $space; 
 }
 main #cont {
+    width:90%;
   border-radius: $space;
   margin: $space;
   padding: $tripleSpace;
-  background: $lightgrey;
+  background: $lightergrey;
   position: absolute;
   box-shadow: 0 0 8px $colorOne;
+
+
   label {
     margin-top: $space;
     color: $colorTwo;
     font-size: 1.2em;
   }
+   
   input {
     border-radius: $space;
     border: 1px dashed $colorTwo;
     padding: $doubleSpace;
     min-width: 50%;
     width: 100%;
-    &:focus {
+    &:focus { 
+  color: $white; 
       border: 1px solid $colorOne;
       box-shadow: 0 0 5px $colorOne;
+      background: $colorTwo;
+    }
+     &:disabled {  
+      background: $white; 
+     opacity:0.5;
+      cursor: default;
     }
   }
   button {
@@ -68,17 +93,25 @@ main #cont {
     border: 1px solid $colorOne;
     background: $colorOne;
     cursor: pointer;
-    &:hover {
+    &:hover { 
       background: $colorTwo;
+    }
+     &:disabled { 
+        &:hover { 
+      background: $colorOne;
+    }
+     opacity:0.5;
+      cursor: default;
     }
   }
 }
 
-#dropHere {
+#dropHere { 
+  width: 100%;
+    height: 150px;
+    background: $white;
   text-align: center;
-  font-size: 1.2em;
-  width: auto;
-  height: 150px;
+  font-size: 1.2em; 
   border: 1px dashed $colorTwo;
   border-radius: $space;
   position: relative;
@@ -86,20 +119,29 @@ main #cont {
   cursor: pointer;
   transition: all .1s ease-in-out;
   overflow: hidden;
+  div{ 
+    position:absolute;
+    top:35%;
+    z-index: 3;
+    cursor:text;
+    width: 100%;
+  }
 }
 
 #dropHere:hover,
 #dropHere.onDragOver {
-  color: $colorOne;
-  background: $white;
-  border: 1px solid $colorOne;
+  color: $white; 
+  border: 1px solid $colorOne; 
+      background: $colorTwo;
 }
 
 #imgsel {
-  opacity: 0;
+   opacity: 0;
   cursor: pointer;
   height: 100%;
   width: 100%;
+  background: red;
+  border:none;
 }
 
 form {

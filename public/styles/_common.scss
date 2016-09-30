@@ -1,12 +1,28 @@
   ::-moz-selection {
      color:  $white;
-     background: $colorTwo; 
+     background: $colorOne; 
  }
  
  ::selection {
      color: $white;
-     background: $colorTwo;
+     background: $colorOne;
  }
+ /* do not group these rules */
+*::-webkit-input-placeholder {
+    color: $colorOne;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: $colorOne;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: $colorOne;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $colorOne;
+}
   a {
          text-decoration: none;
          color: $colorOne; 

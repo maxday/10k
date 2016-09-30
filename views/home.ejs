@@ -17,14 +17,14 @@
         </canvas>
         <div id=cont>
           <div id='dropHere'>
-            <span><%= dropHere %></span>
+            <div><%= dropHere %></div>
             <input type='file' id=imgsel>
           </div>
 
           <form action='/screenshot' method='GET'>
             <label for='scrSht'><%= colorFromWebsite %></label>
-            <input type='text' name='scrSht' id='scrSht' placeholder='any http:// website' />
-            <button> Kolorise  </button>
+            <input type='text' name='scrSht' id='scrSht' placeholder='any http:// website' disabled /> 
+            <button type="button" disabled>Kolorise!</button>
           </form>
         </div>
       </main>

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <% include partials/head-res %>
 
-  <body >
+  <body>
     <% include partials/header-res %>
       <div class='export'>
         <%= exportPalette %>
-        <ul>
-          <li><a href='/export/sass/<%= colors %>' id='exportSass'>Scss</a></li>
-          <li><a href='/export/less/<%= colors %>' id='exportLess'>Less</a></li>
-          <li><a href='#' id='exportLess'>pdf</a></li>
-          <li><a href='#' id='exportLess'>url</a></li>
-          <li><a href='#' id='exportLess'>png</a></li>
-          <li><a href='#' id='exportLess'>photoshop</a></li>
-        </ul>
-        <div id='exportResult'>
-          <% if(typeof exportColor != 'undefined') { %>
-            <% for(var i = 0 ; i < exportColor.length ; i++) { %>
-              <%= exportColor[i]; %>
-                <br />
-                <% } %>
+          <ul>
+            <li><a href='/export/sass/<%= colors %>' id='exportSass'>Scss</a></li>
+            <li><a href='/export/less/<%= colors %>' id='exportLess'>Less</a></li>
+            <li><a href='#' id='exportLess'>pdf</a></li>
+            <li><a href='#' id='exportLess'>url</a></li>
+            <li><a href='#' id='exportLess'>png</a></li>
+            <li><a href='#' id='exportLess'>photoshop</a></li>
+          </ul>
+          <div id='exportResult'>
+            <% if(typeof exportColor != 'undefined') { %>
+              <% for(var i = 0 ; i < exportColor.length ; i++) { %>
+                <%= exportColor[i]; %>
+                  <br />
                   <% } %>
-        </div>
+                    <% } %>
+          </div>
       </div>
       <main>
 
