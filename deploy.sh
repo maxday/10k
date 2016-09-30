@@ -118,8 +118,8 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
 fi
 
 
-
-node_modules/gulp/bin/gulp.js
+pwd
+D:/home/site/wwwroot/node_modules/gulp/bin/gulp.js
 
 ##################################################################################################################################
 echo "Finished successfully."
