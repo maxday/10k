@@ -14,7 +14,15 @@ app.get('/', function (request, response) {
   response.redirect('/en');
 });
 
-app.get('/:lang', function (request, response) {
+app.get('/fr', function (request, response) {
+  response.render('home.ejs' , getTranslateObject(request));
+});
+
+app.get('/en', function (request, response) {
+  response.render('home.ejs' , getTranslateObject(request));
+});
+
+app.get('/it', function (request, response) {
   response.render('home.ejs' , getTranslateObject(request));
 });
 
@@ -34,8 +42,8 @@ app.get('/:lang/about', function (request, response) {
 
 
 
-app.get('/screenshot/', function (req, resp) {
-
+app.get('/screenshot', function (req, resp) {
+  console.log("here is screenshot");
   var request = require('request');
   console.log("https://tenkolorsscrenshot.herokuapp.com/screenshot?scrSht=" + req.query.scrSht);
   request('https://tenkolorsscrenshot.herokuapp.com/screenshot?scrSht=' + req.query.scrSht, function (error, response, body) {
