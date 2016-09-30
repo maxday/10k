@@ -126,3 +126,5 @@ function transformColors(colors) {
   console.log(colorsToReturn);
   return colorsToReturn;
 }
+
+module.exports = app;
