@@ -4,14 +4,13 @@
     "start": "node ./bin/www"
   },
   "version": "0.0.1",
-  "private": true,
   "engines": {
-    "node": "6.3.0"
+    "node": "6.6.0"
   },
   "dependencies": {
     "ejs": "2.5.1",
     "debug": "~2.2.0",
-    "express": "4.9.8",
+    "express": "~4.13.1",
     "get-image-colors": "^1.5.0",
     "node-server-screenshot": "0.0.2"
   },
@@ -35,9 +34,6 @@
     "gulp-useref": "^3.0.0",
     "main-bower-files": "^2.5.0",
     "wiredep": "^2.2.2"
-  },
-  "engines": {
-    "node": "6.6.0"
   },
   "eslintConfig": {
     "env": {
