@@ -18,13 +18,13 @@
         <div id=cont>
           <div id='dropHere'>
             <div><%= dropHere %></div>
-            <input type='file' id=imgsel>
+            <input type='file' onchange="colorAnalysis()" id=imgsel>
           </div>
 
           <form action='/screenshot' method='GET'>
             <label for='scrSht'><%= colorFromWebsite %></label>
-            <input type='text' name='scrSht' id='scrSht' placeholder='any http:// website' disabled /> 
-            <button type="button" disabled>Kolorise!</button>
+            <input type='text' name='scrSht' id='scrSht' placeholder='any http:// website' />
+            <button>Kolorise!</button>
           </form>
         </div>
       </main>

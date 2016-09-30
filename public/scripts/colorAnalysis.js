@@ -194,3 +194,10 @@ function computeHex(col, nb) {
   }
   return r+""+g+""+b;
 }
+
+function colorAnalysis() {
+  var fileInput = document.getElementById("imgsel");
+  console.log(fileInput);
+  var f = fileInput.files[0];
+  read(f);
+}
