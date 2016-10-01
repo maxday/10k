@@ -28,16 +28,20 @@
         <h3> Settings</h3>
         <p> </p>
       </div>
-      <main  style="background: linear-gradient( to right , <% for(var i = 0 ; i < colors.split(', ').length ; i++) { %>
-      <%   percent = 100/colors.split(', ').length * i; %>
-     #<%= colors.split(', ')[i] %> <%= percent %>% ,
-     <% if( i ==   (colors.split(', ').length)-1  ) { %>
-    #<%= colors.split(', ')[i] %> 100% <%  } %>
-     <% } %> );"> 
-        <ul id='res' >
-          <% for(var i = 0 ; i < colors.split(', ').length ; i++) { %>
-            <li style="background-color:#<%= colors.split(', ')[i] %>">
-               #<%= colors.split(', ')[i] %>
+      <main  style="background: linear-gradient( to right , <% for(var i = 0 ; i < colors.split(',').length ; i++) { %>
+      <%   percent = 100/colors.split(',').length * i;
+       %>
+     #<%= colors.split(',')[i] %> <%= percent %>% ,
+     <% if( i ==   (colors.split(',').length)-1  ) { 
+     %>
+    #<%= colors.split(',')[i] %> 100% <%  } 
+    %>
+     <% } 
+     %> );"> 
+        <ul id='res' >  
+          <% for(var i = 0 ; i < colors.split(',').length ; i++) { %>
+            <li style="background-color:#<%= colors.split(',')[i] %>">
+               #<%= colors.split(',')[i] %>
             </li>
             <% } %>
         </ul>
