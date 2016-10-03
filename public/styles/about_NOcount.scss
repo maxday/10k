@@ -8,16 +8,17 @@
 /*    Varaibles & Mixins   */
 
 @import 'variables';
-@import 'mixins'; 
+@import 'mixins';
 @import 'common_NOCOUNT';
 /*----------*/
 
 
 /* more or less TABLET */
-
 @media (min-width: 30em) { 
-     main #cont {
-    width:80%; 
+ 
+
+   main #cont {
+    width:90%; 
 }
 }
 
@@ -26,7 +27,7 @@
 
 @media (min-width: 60em) {
  main #cont {
-    width:50%; 
+    width:90%; 
 }
  
 }

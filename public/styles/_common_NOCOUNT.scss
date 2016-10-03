@@ -1,0 +1,70 @@
+
+@media (min-width: 30em) { 
+  header,
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+  }
+  nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  nav ul li {
+    height: 100%;
+    display: table;
+    margin: 0 1px 0 0;
+  }
+  nav ul li a {
+    height: 100%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 $space;
+    background: $lightergrey;
+    border-bottom: 2px solid transparent;
+  }
+  nav ul li.on a { 
+      cursor:default;
+    color: $colorTwo;
+      background: $lightergrey; 
+  }
+  header nav {
+    .on a {
+      border-bottom: 2px solid $colorTwo;
+    }
+    a:hover {
+      border-bottom: 2px solid $colorTwo;
+    }
+  }
+  footer {
+    nav ul li a {
+      border-top: 2px solid transparent;
+    }
+    .on a {
+      border-top: 2px solid $colorTwo;
+    }
+    a:hover {
+      border-top: 2px solid $colorTwo;
+    }
+  }
+
+   main #cont {
+    width:80%; 
+}
+}
+
+
+/* more or less DESKTOP */
+
+@media (min-width: 60em) {
+ main #cont {
+    width:50%; 
+}
+ 
+}

@@ -122,8 +122,7 @@ main #cont {
   position: relative;
   box-shadow: 0 0 8px $colorOne;
   z-index:3;
-      display:table;
-
+      display:table; 
 }
 canvas#c{
     position: absolute; 

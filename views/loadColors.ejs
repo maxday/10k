@@ -13,7 +13,7 @@
  
 @media (min-width: 30em) {
     .grad{
-    background: linear-gradient( to left , <% for(var i = 0 ; i < colors.split(',').length ; i++) { %>
+    background: linear-gradient( to right , <% for(var i = 0 ; i < colors.split(',').length ; i++) { %>
      <%   percent = 100/colors.split(',').length * i;   %>
      #<%= colors.split(',')[i] %> <%= percent %>% ,
      <% if( i ==   (colors.split(',').length)-1  ) {  %>

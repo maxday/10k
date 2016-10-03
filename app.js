@@ -184,8 +184,8 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       forText: 'pour',
       exportPalette: 'Exporter palette',
       disclaimer: 'fr Disclamer',
-      about: 'fr About',
-      aboutTitle: "About 10 Kolors Project for 10KApart competition",
+      about: "<br>This is a web application to be able to detect and extract the main colors from any image.<br> <ul><li>From a local image (browsing it or with drag & drop)</li><ul><li>From an online image hosted somewhere, throughout an http link.</li><ul><li>Typing directly a website; our software will take care of creating a print-screen for you and will detect colo</li></ul><br>You will have all the main colors detected and displayed to you, in a gradient view and via color code bulle<br><br>You can save the url and see your palette of color whenever you want.<br>You can export the palette colors in sass, less.<br>We are not storing ANY printscreen or images.<br><br><br>The project it is <b>multilngual</b> and.....All stay under 10KiloByte to partecipate to the competition <a href='https://a-k-apart.com/'>10KApart</a>.",
+      aboutTitle: "10 Kolors a 10KApart project",
       disclaimFooter: 'Disclaimer',
       github: 'View this project on',
       menuAbout: 'About',
@@ -193,7 +193,6 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       menuExports: 'Export',
       menuKolorize: 'Kolorize',
       menuRezult: 'Rezult',
-
       titleAbout:'10Kolors - About - no more secrets in your images',
       titleDisclaimer:'10Kolors - Disclaimer - no more secrets in your images',
       titleResult: '10Kolors - Results - no more secrets in your images'
@@ -224,7 +223,6 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       menuExports: 'Export',
       menuKolorize: 'Kolorize',
       menuRezult: 'Rezult',
-
       titleAbout:'10Kolors - About - no more secrets in your images', 
       titleDisclaimer:'10Kolors - Disclaimer - no more secrets in your images',
       titleResult: '10Kolors - Results - no more secrets in your images'
@@ -243,11 +241,11 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       btnKolorize: 'Kolorizza!',
       noSupportForCanvas: 'Your browser does not support the HTML5 canvas tag.',
       footerText: 'Creato con ❤ da ',
-      forText: 'for',
+      forText: 'per',
       exportPalette: 'Esporta palette colori',
-      disclaimer: 'Disclamer',
-      about: "<h2>10 Kolors a 10KApart project<\/h2> This is a web application to be able to detect the colors from any iamges.",
-      aboutTitle: "About 10 Kolors Project for 10KApart competition",
+      disclaimer: 'Disclaimer',
+       about: "<br>This is a web application to be able to detect and extract the main colors from any image.<br> <ul><li>From a local image (browsing it or with drag & drop)</li><ul><li>From an online image hosted somewhere, throughout an http link.</li><ul><li>Typing directly a website; our software will take care of creating a print-screen for you and will detect colo</li></ul><br>You will have all the main colors detected and displayed to you, in a gradient view and via color code bulle<br><br>You can save the url and see your palette of color whenever you want.<br>You can export the palette colors in sass, less.<br>We are not storing ANY printscreen or images.<br><br><br>The project it is <b>multilngual</b> and.....All stay under 10KiloByte to partecipate to the competition <a href='https://a-k-apart.com/'>10KApart</a>.",
+      aboutTitle: "10 Kolors a 10KApart project",
       disclaimFooter: 'Disclaimer',
       github: 'Guarda questo progetto su',
       menuAbout: 'Riguardo 10K',
@@ -255,7 +253,6 @@ function getTranslateObject(request, extraKey0, extraValue0, extraKey1, extraVal
       menuExports: 'Esporta',
       menuKolorize: 'Kolorizza',
       menuRezult: 'Rizultato',
-
       titleAbout:'10Kolors - About - Nessun colore sconosciuto nelle tue immagini',
       titleDisclaimer:'10Kolors - Disclaimer - Nessun colore sconosciuto nelle tue immagini',
       titleResult: '10Kolors - Risultato - Nessun colore sconosciuto nelle tue immagini'
