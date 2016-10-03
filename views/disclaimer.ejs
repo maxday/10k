@@ -3,16 +3,12 @@
   <body  >
     <% include partials/header-disclaimer %>
       <main>
-        <div id=cont>
-          <h1>Disclaimer</h1>
+        <div id=cont class='lg'>
+          
+          <h1><%= disclaimerTitle %></h1> 
           <p><%= disclaimer %></p>
         </div>
       </main>
       <% include partials/footer %>
-        <!-- build:js h/j.js -->
-        <!--[if gt IE 8]><!-->
-
-        <!--<![endif]-->
-        <!-- endbuild -->
   </body>
   </html>

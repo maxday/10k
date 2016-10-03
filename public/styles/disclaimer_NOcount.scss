@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/*----------------------------------------*/ 
+/*  PUT THE MOST OF CSS INSIDE  ----------*/ 
+/* ------- DO NOT COUNT IN THE 10K -------*/ 
+/*----------------------------------------*/ 
+
+/*    Varaibles & Mixins   */
+
+@import 'variables';
+@import 'mixins';
+@import 'common_NOCOUNT';
+/*----------*/
+
+
+/* more or less TABLET */
+@media (min-width: 30em) { 
+ 
+
+   main #cont {
+    width:90%; 
+}
+}
+
+
+/* more or less DESKTOP */
+
+@media (min-width: 60em) {
+ main #cont {
+    width:90%; 
+}
+ 
+}
