@@ -20,13 +20,6 @@
 
 
 
-main { 
-  flex: 1;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
 .noscriptmsg{
     text-align: center;
     border: 1px solid  $colorwarning;
@@ -36,16 +29,10 @@ main {
     margin: $space;
     font-size: 0.8em;
     padding: $space; 
-}
-main #cont {
-    width:90%;
-  border-radius: $space;
-  margin: $space;
-  padding: $tripleSpace;
-  background: $lightergrey;
-  position: absolute;
-  box-shadow: 0 0 8px $colorOne;
-p.dsc{
+}    
+main #cont { 
+    width:90%;  
+ p.dsc{
   font-size:0.9em;
   text-align: center;
   margin-bottom:$tripleSpace;
@@ -57,7 +44,7 @@ p.dsc{
     font-size: 1.2em;
   }
    
-  input {
+  input { 
     border-radius: $space;
     border: 1px dashed $colorTwo;
     padding: $doubleSpace;

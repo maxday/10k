@@ -102,14 +102,40 @@
   
   header {
       border-bottom: 1px solid $grey;
-      box-shadow: 0px 0px 5px $colorOne;
+      box-shadow: 0px 0px 5px $colorOne; 
   }
   
+main { 
+  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+ align-items: stretch;
+
+}
+
+main #cont {
+ border-radius: $space;
+  margin: 15px auto;
+  padding: $tripleSpace;
+  background: $lightergrey;
+  position: relative;
+  box-shadow: 0 0 8px $colorOne;
+  z-index:3;
+      display:table;
+
+}
+canvas#c{
+    position: absolute; 
+    z-index: 1; 
+}
+
   footer {
       border-top: 1px solid $grey;
       font-size: 0.8em;
       box-shadow: 0px 0px 5px $colorOne;
-  }
+ 
+        }
   
   footer nav ul li a {
       font-size: 1em;

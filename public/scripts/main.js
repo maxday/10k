@@ -3,8 +3,8 @@
 function resize() {
 
   //initial
-  w = c.width = window.innerWidth  ,
-    h = c.height = window.innerHeight - 99,
+  w = c.width = window.innerWidth -18,
+    h = c.height = window.innerHeight  -99,
     ctx = c.getContext('2d'),
 
     //parameters

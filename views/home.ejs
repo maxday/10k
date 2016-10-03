@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <% include partials/head-home %> 
   <body> 
-    <% include partials/header-home %>
-      <noscript>
+   
+    
+       <% include partials/header-home %>
+  
+        <noscript>
     <style type='text/css'>
         #dropHere {display:none;}
     </style>
@@ -10,6 +13,7 @@
       <%= noJs %>
     </div>
     </noscript>
+    
       <main>
         <canvas id=c>
         </canvas>
@@ -27,17 +31,16 @@
             <button><%= btnKolorize %></button>
           </form>
         </div>
-      </main> 
-      <canvas id='myCanvas' style='display:none;'>
-        <%= noSupportForCanvas %>
-      </canvas> 
+
+  </main> 
+  
+      <% include partials/footer %>
+ 
       <div id='screenshotResult'>
         <% if(typeof screenshotImg != 'undefined') { %>
           <img src='/screenshots/<%= screenshotImg %>' width=800 />
           <% } %>
       </div>
- 
-      <% include partials/footer %>
         <!-- build:js h/j.js -->
         <!--[if gt IE 8]><!-->
         <script src='/scripts/main.js' async defer='defer'></script>
