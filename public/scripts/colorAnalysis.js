@@ -35,7 +35,7 @@ function read(file) {
 
 
 img.onload = function() {
-  var c = document.getElementById("myCanvas");
+  var c = document.getElementById("c");
   console.log(c);
   c.width = img.width;
   c.height = img.height;
